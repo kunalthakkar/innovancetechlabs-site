@@ -1,8 +1,9 @@
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: #f9f9f9;
     color: #333;
 }
 
@@ -13,75 +14,55 @@ body {
     padding: 20px;
 }
 
+/* Header styles with gradient */
 header {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #4A90E2, #50C9C3);
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 25px 15px;
+    border-bottom: 4px solid #50C9C3;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.1rem;
 }
 
 header nav {
-    margin-top: 10px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 header nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    margin: 8px 15px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header nav a:hover {
-    text-decoration: underline;
+    color: #FFD700;
+    transform: scale(1.05);
 }
 
+/* Section styles */
 section {
     background-color: white;
     margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-    color: #007bff;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
+    color: #4A90E2;
+    border-bottom: 2px solid #50C9C3;
+    padding-bottom: 8p
