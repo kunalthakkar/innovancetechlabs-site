@@ -1,0 +1,43 @@
+.header {
+  background: linear-gradient(90deg, #0070f3, #1d3f72);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.service-card {
+  background: white;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  font-style: italic;
+  margin: 20px;
+  padding: 10px;
+  border-left: 5px solid #0070f3;
+}
+
+@media (max-width: 768px) {
+  .feature {
+    flex-direction: column;
+  }
+  .service-card {
+    margin: 10px 0;
+  }
+}
