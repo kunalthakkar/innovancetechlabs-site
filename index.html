@@ -1,45 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Home</title>
-<link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InnovanceTechLabs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:#0a0f2c;
+  color:white;
+}
+nav a {
+  margin:0 15px;
+  color:white;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero {
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  background:linear-gradient(rgba(10,15,44,.7),rgba(75,108,183,.7)),
+  url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+  background-size:cover;
+}
+.hero h1 { font-size:48px; }
+
+/* SECTIONS */
+section {
+  padding:80px 20px;
+}
+.container {
+  max-width:1200px;
+  margin:auto;
+}
+
+/* CARDS */
+.cards {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.card {
+  width:300px;
+  background:white;
+  border-radius:15px;
+  overflow:hidden;
+  transition:.3s;
+}
+.card img {
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+.card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ALT BACKGROUND */
+.alt {
+  background:#f8f9fc;
+}
+
+/* GALLERY */
+.gallery img {
+  width:300px;
+  margin:10px;
+  border-radius:10px;
+}
+
+/* CONTACT */
+iframe {
+  border:0;
+  border-radius:10px;
+}
+
+/* FOOTER */
+footer {
+  background:#0a0f2c;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+</style>
+
 </head>
 <body>
 
 <header>
-<div><b>InnovanceTechLabs</b></div>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="industries.html">Industries</a>
-<a href="portfolio.html">Portfolio</a>
-<a href="contact.html">Contact</a>
-</nav>
+  <div><b>InnovanceTechLabs</b></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
-
-<section class='hero'>
-<h1>Where Innovation meets Advancement</h1>
-<p>Premium IT Solutions</p>
-</section>
-
-<section class='fade' style='opacity:0;transform:translateY(40px);transition:1s;'>
-<h2>Services</h2>
-<div class='cards'>
-<div class='card'><img src='https://images.unsplash.com/photo-1555066931-4365d14bab8c'><h3>Software</h3></div>
-<div class='card'><img src='https://images.unsplash.com/photo-1451187580459-43490279c0fa'><h3>Cloud</h3></div>
-<div class='card'><img src='https://images.unsplash.com/photo-1677442136019-21780ecad995'><h3>AI</h3></div>
-</div>
+<section class="hero">
+  <h1>Where Innovation meets Advancement</h1>
+  <p>Modern IT Solutions for Growing Businesses</p>
 </section>
 
 <section>
-<h2>Our Achievements</h2>
-<div class='counter'>50+ Projects</div>
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+        <h3>Software Development</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
+        <h3>Cloud Solutions</h3>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+        <h3>AI & Automation</h3>
+      </div>
+    </div>
+  </div>
 </section>
 
+<section class="alt">
+  <div class="container">
+    <h2>About Us</h2>
+    <p>InnovanceTechLabs delivers modern software, cloud, and AI solutions to help businesses scale efficiently.</p>
+  </div>
+</section>
 
-<footer>© 2026 InnovanceTechLabs</footer>
-<script src="js/script.js"></script>
+<section>
+  <div class="container">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+      <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6">
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Phone: 9725287818</p>
+
+    <iframe 
+    src="https://maps.google.com/maps?q=Seventh Bliss Gota Ahmedabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    width="100%" height="300"></iframe>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 InnovanceTechLabs
+</footer>
+
 </body>
 </html>
