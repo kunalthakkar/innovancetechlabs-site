@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Innovace Techlabs</title>
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Innovance Techlabs</title>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 
-<header class="nav">
+<header class="navbar">
   <div class="logo">
-    <div class="arrow-logo"></div>
-    <span>INNOVACE <b>TECHLABS</b></span>
+    <img src="images/logo.svg" alt="logo"/>
+    <span>INNOVANCE <small>TECHLABS</small></span>
+    <span>Where Innovation Meets Advancement</span>
   </div>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Training</a>
-    <a href="#">Contact</a>
+    <a class="active">Home</a>
+    <a>About Us</a>
+    <a>Services</a>
+    <a>Training</a>
+    <a>Careers</a>
+    <a>Contact Us</a>
   </nav>
 
-  <button class="btn">Get Started</button>
+  <button class="btn-primary">Get Started</button>
 </header>
 
 <section class="hero">
-  <div class="left">
-    <p class="tag">WELCOME TO INNOVACE TECHLABS</p>
-    <h1> Empowering Ideas.<br> <span>Building Solutions.</span> </h1> <p class="desc"> We deliver innovative software solutions and industry-focused training globally. </p> 
-    <div class="buttons"> 
-      <button class="btn">Our Services</button>
-      <button class="outline">Explore Training</button> 
+  <div class="hero-left">
+    <p class="welcome">WELCOME TO INNOVANCE TECHLABS</p>
+    <h1>
+      Empowering Ideas.<br/>
+      Building <span>Solutions.</span>
+    </h1>
+
+    <p class="desc">
+      We deliver innovative software solutions and industry-focused
+      training that helps businesses and individuals grow globally.
+    </p>
+
+    <div class="buttons">
+      <button class="btn-primary">Our Services →</button>
+      <button class="btn-outline">Explore Training</button>
     </div>
   </div>
 
-  <div class="right">
-    <svg class="main-arrow" viewBox="0 0 200 200">
-      <defs>
-        <linearGradient id="grad" x1="0" x2="1">
-          <stop offset="0%" stop-color="#7f5cff"/>
-          <stop offset="100%" stop-color="#3aa0ff"/>
-        </linearGradient>
-      </defs>
-      <polygon points="20,20 180,100 20,180" fill="url(#grad)"/>
-    </svg>
+  <div class="hero-right">
+    <div class="stats">
+      <div class="card"><h3>500+</h3><p>Happy Clients</p></div>
+      <div class="card"><h3>1200+</h3><p>Projects Delivered</p></div>
+      <div class="card"><h3>2500+</h3><p>Students Trained</p></div>
+      <div class="card"><h3>25+</h3><p>Countries Served</p></div>
+    </div>
   </div>
 </section>
 
-<section class="stats">
-  <div>500+<span>Clients</span></div>
-  <div>1200+<span>Projects</span></div>
-  <div>2500+<span>Students</span></div>
-  <div>25+<span>Countries</span></div>
+<section class="services">
+  <div class="service-card">Software Solutions</div>
+  <div class="service-card">IT Consulting</div>
+  <div class="service-card">Training Programs</div>
+  <div class="service-card">Global Reach</div>
 </section>
 
-<footer>© Innovace Techlabs</footer>
+<section class="features">
+  <div>Secure & Reliable</div>
+  <div>Agile Approach</div>
+  <div>Customer First</div>
+  <div>Continuous Innovation</div>
+</section>
 
+<script src="js/script.js"></script>
 </body>
 </html>
