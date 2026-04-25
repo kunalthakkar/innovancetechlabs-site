@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>InnovanceTechLabs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovace Techlabs</title>
 <link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-  <div><b>InnovanceTechLabs</b></div>
+<header class="nav">
+  <div class="logo">
+    <div class="arrow-logo"></div>
+    <span>INNOVACE <b>TECHLABS</b></span>
+  </div>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Training</a>
+    <a href="#">Contact</a>
   </nav>
+
+  <button class="btn">Get Started</button>
 </header>
 
 <section class="hero">
-  <h1>Where Innovation meets Advancement</h1>
-  <p>Building scalable IT solutions</p>
-</section>
+  <div class="left">
+    <p class="tag">WELCOME TO INNOVACE TECHLABS</p>
+    <h1>Empowering Ideas.<br><span>Building Solutions.</span></h1>
+    <p>We deliver innovative software solutions globally.</p>
 
-<section class="fade">
-  <div class="container">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card">Software Development</div>
-      <div class="card">Cloud Solutions</div>
-      <div class="card">AI & Automation</div>
+    <div class="buttons">
+      <button class="btn">Our Services</button>
+      <button class="outline">Explore Training</button>
     </div>
+  </div>
+
+  <div class="right">
+    <svg class="main-arrow" viewBox="0 0 200 200">
+      <defs>
+        <linearGradient id="grad" x1="0" x2="1">
+          <stop offset="0%" stop-color="#7f5cff"/>
+          <stop offset="100%" stop-color="#3aa0ff"/>
+        </linearGradient>
+      </defs>
+      <polygon points="20,20 180,100 20,180" fill="url(#grad)"/>
+    </svg>
   </div>
 </section>
 
-<footer>© 2026 InnovanceTechLabs</footer>
+<section class="stats">
+  <div>500+<span>Clients</span></div>
+  <div>1200+<span>Projects</span></div>
+  <div>2500+<span>Students</span></div>
+  <div>25+<span>Countries</span></div>
+</section>
 
-<script src="js/script.js"></script>
+<footer>© Innovace Techlabs</footer>
+
 </body>
 </html>
