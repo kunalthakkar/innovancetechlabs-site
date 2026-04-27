@@ -1,34 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Portfolio</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio — Innovance Techlabs</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-<header>
-<div><b>InnovanceTechLabs</b></div>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="industries.html">Industries</a>
-<a href="portfolio.html">Portfolio</a>
-<a href="contact.html">Contact</a>
-</nav>
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="images/logo.svg" alt="Innovance Techlabs Logo"/>
+    <div class="logo-text"><span class="brand">INNOVANCE</span><span class="tagline">TECHLABS</span><span class="slogan">Where Innovation Meets Advancement</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="training.html">Training</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+  <a href="contact.html"><button class="btn-primary">Get Started</button></a>
 </header>
 
-
-<section><h2>Portfolio</h2>
-<div class='gallery'>
-<img src='https://images.unsplash.com/photo-1498050108023-c5249f4df085'>
-<img src='https://images.unsplash.com/photo-1551434678-e076c223a692'>
-<img src='https://images.unsplash.com/photo-1461749280684-dccba630e2f6'>
+<div class="page-hero fade">
+  <span class="page-badge">Our Portfolio</span>
+  <h1>Projects That <span class="grad-text">Speak</span> for Themselves</h1>
+  <p>A showcase of our most impactful work — from enterprise platforms to consumer apps — delivered across industries worldwide.</p>
 </div>
+
+<section class="section">
+  <div class="portfolio-filter fade">
+    <button class="filter-btn active">All</button>
+    <button class="filter-btn">Web Apps</button>
+    <button class="filter-btn">Mobile</button>
+    <button class="filter-btn">Cloud</button>
+    <button class="filter-btn">AI / Data</button>
+  </div>
+
+  <div class="cards-grid fade">
+    <div class="portfolio-card">
+      <div class="port-thumb">&#127973;</div>
+      <div class="port-body">
+        <h3>HealthTrack Pro</h3>
+        <p>A comprehensive hospital management system with patient records, appointment scheduling, billing, and real-time analytics for a 500-bed hospital chain.</p>
+        <span class="tag">.NET</span><span class="tag">React</span><span class="tag">Azure</span>
+        <a href="contact.html" style="display:block;margin-top:14px;"><button class="btn-outline" style="width:100%;padding:9px;">View Case Study</button></a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="port-thumb">&#127968;</div>
+      <div class="port-body">
+        <h3>FinEdge Banking Platform</h3>
+        <p>A next-gen digital banking portal with mobile banking, loan processing, and fraud detection powered by ML models — serving 200K+ customers.</p>
+        <span class="tag">Angular</span><span class="tag">Node.js</span><span class="tag">AWS</span>
+        <a href="contact.html" style="display:block;margin-top:14px;"><button class="btn-outline" style="width:100%;padding:9px;">View Case Study</button></a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="port-thumb">&#128722;</div>
+      <div class="port-body">
+        <h3>ShopEasy E-Commerce</h3>
+        <p>A high-traffic multi-vendor e-commerce platform with AI-powered recommendations, real-time inventory, and seamless payment integrations.</p>
+        <span class="tag">React</span><span class="tag">Python</span><span class="tag">AI/ML</span>
+        <a href="contact.html" style="display:block;margin-top:14px;"><button class="btn-outline" style="width:100%;padding:9px;">View Case Study</button></a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="port-thumb">&#128666;</div>
+      <div class="port-body">
+        <h3>LogiTrack Supply Chain</h3>
+        <p>End-to-end supply chain visibility platform with IoT sensor integration, predictive analytics, and driver management for a logistics company.</p>
+        <span class="tag">React Native</span><span class="tag">Node.js</span><span class="tag">IoT</span>
+        <a href="contact.html" style="display:block;margin-top:14px;"><button class="btn-outline" style="width:100%;padding:9px;">View Case Study</button></a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="port-thumb">&#127979;</div>
+      <div class="port-body">
+        <h3>EduLearn LMS</h3>
+        <p>A scalable learning management system with live classes, quiz engines, progress tracking, and a mobile app used by 50,000+ students.</p>
+        <span class="tag">React</span><span class="tag">.NET</span><span class="tag">AWS</span>
+        <a href="contact.html" style="display:block;margin-top:14px;"><button class="btn-outline" style="width:100%;padding:9px;">View Case Study</button></a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="port-thumb">&#129302;</div>
+      <div class="port-body">
+        <h3>SmartInsight Analytics</h3>
+        <p>A business intelligence dashboard with real-time data pipelines, NLP-powered report generation, and predictive forecasting for retail chains.</p>
+        <span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">AI/ML</span>
+        <a href="contact.html" style="display:block;margin-top:14px;"><button class="btn-outline" style="width:100%;padding:9px;">View Case Study</button></a>
+      </div>
+    </div>
+  </div>
 </section>
 
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><img src="images/logo.svg" alt="logo" style="width:36px;height:36px;"/><div class="logo-text"><span class="brand">INNOVANCE</span><span class="tagline">TECHLABS</span></div></a><p class="brand-desc">Where Innovation Meets Advancement.</p></div>
+    <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="careers.html">Careers</a></div>
+    <div class="footer-col"><h5>Services</h5><a href="services.html">Software Development</a><a href="services.html">IT Consulting</a><a href="training.html">Training Programs</a></div>
+    <div class="footer-col"><h5>Contact</h5><a href="contact.html">&#128222; +91 97252 87818</a><a href="contact.html">&#128205; Seventh Bliss, Gota, Ahmedabad</a></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2024 Innovance Techlabs. All rights reserved.</span><span>Where Innovation Meets Advancement</span></div>
+</footer>
 
-<footer>© 2026 InnovanceTechLabs</footer>
 <script src="js/script.js"></script>
 </body>
 </html>
