@@ -1,0 +1,182 @@
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <div class="absolute inset-0 bg-[url('/images/company-culture.png')] bg-cover bg-center opacity-10 mix-blend-luminosity"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-dark-975/80 via-dark-975/95 to-dark-975"></div>
+  
+  <!-- Glowing orbs -->
+  <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob" style="animation-delay: 2s"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+    <div class="text-center max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-8">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        Where Innovation Meets Advancement
+      </div>
+      <h1 class="text-5xl md:text-7xl font-space font-bold mb-6 leading-tight tracking-tight">
+        Transforming Ideas Into <br/>
+        <span class="text-gradient">Intelligent Digital Solutions</span>
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-3xl mx-auto font-poppins font-light leading-relaxed">
+        Innovance TechLabs helps startups and enterprises build scalable software, AI-powered platforms, cloud infrastructure, and modern digital experiences.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <button class="btn-primary flex items-center gap-2">
+          Book Free Consultation <lucide-icon [img]="ArrowRightIcon" class="w-5 h-5"></lucide-icon>
+        </button>
+        <button class="btn-outline">
+          Explore Services
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. TRUST / STATS SECTION -->
+<section class="py-12 border-y border-white/5 bg-white/[0.01] relative z-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-4xl md:text-5xl font-space font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">50+</div>
+        <div class="text-gray-400 text-sm font-poppins uppercase tracking-wider">Projects Delivered</div>
+      </div>
+      <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-4xl md:text-5xl font-space font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">10+</div>
+        <div class="text-gray-400 text-sm font-poppins uppercase tracking-wider">Years Experience</div>
+      </div>
+      <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-4xl md:text-5xl font-space font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">100%</div>
+        <div class="text-gray-400 text-sm font-poppins uppercase tracking-wider">Client Satisfaction</div>
+      </div>
+      <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
+        <div class="text-4xl md:text-5xl font-space font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">24/7</div>
+        <div class="text-gray-400 text-sm font-poppins uppercase tracking-wider">Global Support</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. SERVICES SECTION -->
+<section class="py-24 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-space font-bold mb-6">Cutting-Edge <span class="text-gradient">Capabilities</span></h2>
+      <p class="text-gray-400 text-lg font-poppins">We leverage the latest technologies to build solutions that give you an unfair advantage in the market.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div *ngFor="let service of services" class="glass-card group cursor-pointer flex flex-col h-full" [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="service.delay">
+        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 border border-cyan-500/20 group-hover:border-cyan-400 group-hover:bg-cyan-500/20 transition-all duration-300">
+          <lucide-icon [img]="service.icon" class="text-cyan-400 w-7 h-7 group-hover:scale-110 transition-transform duration-300"></lucide-icon>
+        </div>
+        <h3 class="text-xl font-space font-bold text-white mb-3">{{ service.title }}</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow font-poppins">
+          {{ service.desc }}
+        </p>
+        <div class="mt-auto">
+          <a routerLink="/services" class="text-cyan-400 text-sm font-medium flex items-center gap-1 group-hover:text-cyan-300 transition-colors">
+            Learn more <lucide-icon [img]="ArrowRightIcon" class="w-4 h-4 transition-transform group-hover:translate-x-1"></lucide-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. WHY CHOOSE US -->
+<section class="py-24 bg-dark-900/30 border-y border-white/5 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-4xl md:text-5xl font-space font-bold mb-6">Why Partner With <span class="text-gradient">Innovance?</span></h2>
+        <p class="text-gray-400 text-lg mb-8 font-poppins">
+          We don't just write code; we engineer scalable businesses. Our team blends deep technical expertise with strategic thinking to deliver solutions that scale securely.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div *ngFor="let item of whyChooseUs" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full glass flex items-center justify-center text-cyan-400">
+              <lucide-icon [img]="item.icon" class="w-5 h-5"></lucide-icon>
+            </div>
+            <span class="text-white font-medium font-poppins text-sm">{{ item.title }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative" data-aos="fade-left">
+        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 rounded-2xl filter blur-3xl"></div>
+        <div class="glass rounded-2xl border border-white/10 p-8 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-purple-500"></div>
+          <img src="/images/company-culture.png" alt="Company Culture" class="rounded-xl w-full h-auto object-cover opacity-90 mix-blend-lighten border border-white/5 shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. TECHNOLOGY STACK -->
+<section class="py-20 overflow-hidden">
+  <div class="text-center mb-12">
+    <h3 class="text-gray-400 font-poppins uppercase tracking-widest text-sm">Powered by Modern Technology</h3>
+  </div>
+  <div class="flex space-x-12 animate-marquee whitespace-nowrap">
+    <div *ngFor="let tech of techStack; let i = index" class="inline-flex items-center justify-center h-16 px-8 rounded-xl glass border-white/5 text-gray-300 font-space font-bold text-xl hover:text-cyan-400 hover:border-cyan-500/30 transition-colors">
+      {{ tech }}
+    </div>
+  </div>
+</section>
+
+<!-- 6. COMPANY CULTURE & 7. PROCESS -->
+<section class="py-24 relative bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-space font-bold mb-6">Our Delivery <span class="text-gradient">Process</span></h2>
+      <p class="text-gray-400 text-lg font-poppins">A streamlined, transparent, and agile methodology that guarantees success from concept to deployment.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let step of processSteps; let i = index" class="relative pl-8 md:pl-0" data-aos="fade-up" [attr.data-aos-delay]="i * 100">
+        <!-- Connecting Line for Desktop -->
+        <div *ngIf="i < processSteps.length - 1" class="hidden lg:block absolute top-8 left-[60%] w-full h-0.5 bg-gradient-to-r from-cyan-500/20 to-transparent z-0"></div>
+        
+        <div class="relative z-10">
+          <div class="text-6xl font-space font-extrabold text-white/5 mb-4 stroke-text">{{ step.step }}</div>
+          <h4 class="text-xl font-bold text-white mb-2 font-space">{{ step.title }}</h4>
+          <p class="text-gray-400 text-sm font-poppins">{{ step.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. TESTIMONIAL SECTION -->
+<section class="py-24 relative border-y border-white/5 bg-dark-900/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-space font-bold mb-6">Client <span class="text-gradient">Success Stories</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div *ngFor="let t of testimonials; let i = index" class="glass-card relative" data-aos="fade-up" [attr.data-aos-delay]="i * 200">
+        <div class="text-cyan-500/20 mb-4">
+          <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        </div>
+        <p class="text-gray-300 font-poppins italic mb-6">"{{ t.quote }}"</p>
+        <div class="text-white font-space font-medium text-sm text-cyan-400">{{ t.author }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FINAL CTA SECTION -->
+<section class="py-32 relative overflow-hidden text-center">
+  <div class="absolute inset-0 bg-gradient-to-t from-primary-900/20 to-transparent"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/10 rounded-full mix-blend-screen filter blur-[120px]"></div>
+  
+  <div class="max-w-4xl mx-auto px-4 relative z-10" data-aos="zoom-in">
+    <h2 class="text-5xl md:text-7xl font-space font-bold mb-8">Ready to Build the <br/><span class="text-gradient">Future With Us?</span></h2>
+    <p class="text-gray-400 text-xl font-poppins mb-10">Join top-tier companies leveraging our AI and engineering expertise to dominate their industries.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button class="btn-primary text-lg px-8 py-4">Start Your Project</button>
+      <button class="btn-outline text-lg px-8 py-4">Schedule Consultation</button>
+    </div>
+  </div>
+</section>
+
+
