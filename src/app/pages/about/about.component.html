@@ -1,773 +1,169 @@
-<!-- 1. HERO SECTION -->
-<section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-  <!-- Animated Background -->
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-blob"></div>
-    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-    <div class="absolute top-1/2 right-0 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
-  </div>
+<section class="itl-page-hero itl-page-hero-about">
+  <div class="itl-page-hero-overlay"></div>
+  <div class="itl-page-shell relative z-10">
+    <div class="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+      <div class="itl-page-copy">
+        <div class="itl-eyebrow mb-6">
+          <lucide-icon [img]="SparklesIcon" class="h-4 w-4"></lucide-icon>
+          Where Innovation Meets Advancement
+        </div>
+        <h1 class="itl-page-title">We build technology with strategic clarity and engineering depth.</h1>
+        <p class="itl-page-lead">
+          InnovanceTechLabs partners with ambitious teams to design, modernize, automate, and scale software systems that are reliable in production and impressive in the hands of users.
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a routerLink="/contact" class="itl-button itl-button-primary">
+            Work With Us
+            <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>
+          </a>
+          <a routerLink="/services" class="itl-button itl-button-secondary">
+            Explore Capabilities
+            <lucide-icon [img]="LayersIcon" class="h-5 w-5"></lucide-icon>
+          </a>
+        </div>
+      </div>
 
-  <!-- Grid Pattern Overlay -->
-  <div class="absolute inset-0 z-0 opacity-10">
-    <div class="absolute inset-0" style="background-image: linear-gradient(0deg, transparent 24%, rgba(59,130,246,.15) 25%, rgba(59,130,246,.15) 26%, transparent 27%, transparent 74%, rgba(59,130,246,.15) 75%, rgba(59,130,246,.15) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(59,130,246,.15) 25%, rgba(59,130,246,.15) 26%, transparent 27%, transparent 74%, rgba(59,130,246,.15) 75%, rgba(59,130,246,.15) 76%, transparent 77%, transparent); background-size: 60px 60px;"></div>
-  </div>
-
-  <!-- Content -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-    <div class="mb-6 inline-block" data-aos="fade-up">
-      <span class="px-4 py-2 rounded-full bg-blue-500/20 border border-blue-500/50 text-blue-400 text-sm font-medium">Where Innovation Meets Advancement</span>
+      <div class="itl-orbit-panel" aria-label="InnovanceTechLabs operating model">
+        <div class="itl-orbit-core">
+          <lucide-icon [img]="BrainCircuitIcon" class="h-12 w-12"></lucide-icon>
+        </div>
+        <span>Product</span>
+        <span>Cloud</span>
+        <span>AI</span>
+        <span>Scale</span>
+      </div>
     </div>
 
-    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 relative" data-aos="fade-up" data-aos-delay="100">
-      <span class="block text-white mb-2">InnovanceTechLabs</span>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400">Architecting Tomorrow</span>
-    </h1>
-
-    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="200">
-      Enterprise-grade digital transformation solutions powered by AI, cloud infrastructure, and visionary engineering. Trusted by Fortune 500 companies and ambitious startups alike.
-    </p>
-
-    <!-- CTA Buttons -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="300">
-      <button class="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1">
-        Work With Us
-      </button>
-      <button class="px-8 py-4 border border-purple-500/50 text-purple-400 font-bold rounded-lg hover:bg-purple-500/10 transition-all duration-300 backdrop-blur">
-        Explore Services
-      </button>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="400">
-      <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
+    <div class="mt-14 grid gap-4 md:grid-cols-3">
+      <div *ngFor="let stat of stats" class="itl-page-stat">
+        <strong>{{ stat.value }}</strong>
+        <span>{{ stat.label }}</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 2. COMPANY STORY SECTION -->
-<section class="py-24 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <!-- Text Content -->
+<section class="itl-section itl-section-bright relative overflow-hidden">
+  <div class="itl-page-shell">
+    <div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      <div class="itl-media-frame" data-aos="fade-right">
+        <img src="/images/company-culture.png" alt="InnovanceTechLabs engineers collaborating on software and AI systems" loading="lazy">
+      </div>
+      <div data-aos="fade-left">
+        <p class="itl-section-kicker">Company Story</p>
+        <h2 class="itl-section-title mt-4">A focused software company for teams that need practical innovation.</h2>
+        <div class="mt-6 space-y-5 text-lg leading-8 text-slate-700">
+          <p>
+            InnovanceTechLabs was built around a simple belief: modern software should feel premium to use and disciplined under the hood. We help businesses move beyond scattered tools, fragile workflows, and slow decision cycles.
+          </p>
+          <p>
+            Our work blends business discovery, experience design, full-stack engineering, cloud architecture, analytics, AI automation, QA, and team enablement. The result is technology that supports growth instead of creating operational drag.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="itl-section relative overflow-hidden bg-[#050816]">
+  <div class="itl-circuit-bg" aria-hidden="true"></div>
+  <div class="itl-page-shell relative z-10">
+    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+      <p class="itl-section-kicker itl-kicker-dark">Mission & Vision</p>
+      <h2 class="itl-section-title itl-title-dark mt-4">Engineering digital systems that make organizations faster, smarter, and more resilient.</h2>
+    </div>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-2">
+      <article class="itl-dark-card" data-aos="fade-up">
+        <lucide-icon [img]="TargetIcon" class="h-8 w-8 text-cyan-200"></lucide-icon>
+        <h3>Our Mission</h3>
+        <p>
+          To help companies transform ideas, operations, and data into scalable digital products that deliver measurable value and long-term technical confidence.
+        </p>
+      </article>
+      <article class="itl-dark-card" data-aos="fade-up" data-aos-delay="100">
+        <lucide-icon [img]="EyeIcon" class="h-8 w-8 text-amber-200"></lucide-icon>
+        <h3>Our Vision</h3>
+        <p>
+          To become a trusted global technology partner known for thoughtful product strategy, reliable execution, and future-ready engineering practices.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="itl-section relative overflow-hidden bg-white">
+  <div class="itl-page-shell">
+    <div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
       <div data-aos="fade-right">
-        <h2 class="text-4xl md:text-5xl font-black mb-8 text-white">
-          Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Journey</span>
-        </h2>
-        
-        <div class="space-y-6 text-gray-400 leading-relaxed">
-          <p class="text-lg">Founded with a visionary mission, InnovanceTechLabs emerged from the conviction that enterprise software should be both powerful and elegant. We saw a critical gap: organizations struggling with legacy systems while competitors leveraged cutting-edge cloud and AI technologies.</p>
-          
-          <p class="text-lg">Today, we partner with industry leaders across healthcare, finance, manufacturing, and emerging sectors. Our scalable architecture framework, cloud-first approach, and AI-driven automation solutions have transformed digital landscapes for 100+ enterprise clients.</p>
-          
-          <p class="text-lg">We don't just build software—we architect digital ecosystems that accelerate business growth, enhance customer experiences, and position companies as technology leaders in their industries.</p>
-
-          <div class="pt-4 space-y-3">
-            <div class="flex items-center gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span>Global delivery with 24/7 enterprise support</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-2 h-2 bg-cyan-500 rounded-full"></div>
-              <span>AI & automation at the core of every solution</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
-              <span>Certifications in security, compliance, and cloud excellence</span>
-            </div>
+        <p class="itl-section-kicker">How We Work</p>
+        <h2 class="itl-section-title mt-4">The values behind every engagement.</h2>
+        <p class="mt-5 text-lg leading-8 text-slate-600">
+          We bring a calm, senior engineering approach to decisions that often feel expensive, urgent, or technically messy.
+        </p>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <article *ngFor="let value of values; let i = index" class="itl-choice-card" data-aos="fade-up" [attr.data-aos-delay]="i * 90">
+          <div class="flex items-center justify-between">
+            <lucide-icon [img]="value.icon" class="h-7 w-7 text-cyan-600"></lucide-icon>
+            <span>0{{ i + 1 }}</span>
           </div>
+          <h3 class="mt-6 text-lg font-semibold text-slate-950">{{ value.title }}</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-600">{{ value.desc }}</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="itl-section itl-tech-section relative overflow-hidden">
+  <div class="itl-page-shell">
+    <div class="grid gap-8 lg:grid-cols-3">
+      <div class="lg:col-span-1" data-aos="fade-right">
+        <p class="itl-section-kicker itl-kicker-dark">Operating System</p>
+        <h2 class="itl-section-title itl-title-dark mt-4">A delivery model built around trust.</h2>
+      </div>
+      <div class="grid gap-3 md:grid-cols-2 lg:col-span-2">
+        <div *ngFor="let principle of operatingPrinciples" class="itl-check-row" data-aos="fade-up">
+          <lucide-icon [img]="CheckCircleIcon" class="h-5 w-5"></lucide-icon>
+          <span>{{ principle }}</span>
         </div>
       </div>
+    </div>
 
-      <!-- Visual Element -->
-      <div data-aos="fade-left" class="relative h-96">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
-        <div class="relative h-full rounded-2xl border border-blue-500/30 bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-xl overflow-hidden p-8 flex items-center justify-center">
-          <div class="text-center">
-            <lucide-icon [img]="RocketIcon" class="w-32 h-32 text-blue-400 mx-auto mb-6 animate-float"></lucide-icon>
-            <p class="text-gray-400 text-sm">Accelerating Digital Transformation</p>
-          </div>
+    <div class="mt-12 grid gap-5 md:grid-cols-2">
+      <div class="itl-dark-card" data-aos="fade-up">
+        <lucide-icon [img]="CodeIcon" class="h-8 w-8 text-cyan-200"></lucide-icon>
+        <h3>Capabilities</h3>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <span *ngFor="let capability of capabilities" class="itl-chip-dark">{{ capability }}</span>
+        </div>
+      </div>
+      <div class="itl-dark-card" data-aos="fade-up" data-aos-delay="100">
+        <lucide-icon [img]="GlobeIcon" class="h-8 w-8 text-emerald-200"></lucide-icon>
+        <h3>Industries</h3>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <span *ngFor="let industry of industries" class="itl-chip-dark">{{ industry }}</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 3. MISSION & VISION SECTION -->
-<section class="py-24 relative overflow-hidden bg-gradient-to-b from-transparent via-blue-500/5 to-transparent">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">
-        Mission & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Vision</span>
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Our guiding principles that drive innovation and excellence</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Mission Card -->
-      <div class="group relative" data-aos="fade-up" data-aos-delay="100">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-gradient-to-br from-white/5 to-blue-500/10 backdrop-blur-xl hover:border-blue-500/60 transition-all duration-300">
-          <div class="flex items-start gap-4 mb-6">
-            <lucide-icon [img]="TargetIcon" class="w-12 h-12 text-blue-400 flex-shrink-0 mt-1"></lucide-icon>
-            <h3 class="text-2xl font-bold text-white">Our Mission</h3>
-          </div>
-          <p class="text-gray-300 text-lg leading-relaxed">
-            To empower enterprises through transformative technology, delivering AI-powered solutions and cloud-native architectures that drive measurable business impact, accelerate digital innovation, and unlock unprecedented growth.
-          </p>
-          <div class="mt-6 pt-6 border-t border-white/10">
-            <p class="text-sm text-blue-400 font-semibold">Impact-Driven • Innovation-Led • Enterprise-Focused</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vision Card -->
-      <div class="group relative" data-aos="fade-up" data-aos-delay="200">
-        <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-purple-500/30 bg-gradient-to-br from-white/5 to-purple-500/10 backdrop-blur-xl hover:border-purple-500/60 transition-all duration-300">
-          <div class="flex items-start gap-4 mb-6">
-            <lucide-icon [img]="EyeIcon" class="w-12 h-12 text-purple-400 flex-shrink-0 mt-1"></lucide-icon>
-            <h3 class="text-2xl font-bold text-white">Our Vision</h3>
-          </div>
-          <p class="text-gray-300 text-lg leading-relaxed">
-            To be the world's most trusted technology partner, defining the future of intelligent enterprise software and setting the global standard for innovation, quality, and customer success.
-          </p>
-          <div class="mt-6 pt-6 border-t border-white/10">
-            <p class="text-sm text-purple-400 font-semibold">Visionary • Trustworthy • Excellence-Driven</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 4. CORE VALUES SECTION -->
-<section class="py-24 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">
-        Core <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Values</span>
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Principles that define our culture and decisions</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="group relative" data-aos="fade-up" data-aos-delay="100">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-blue-500/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-4">💡</div>
-          <h4 class="text-xl font-bold text-white mb-3">Innovation</h4>
-          <p class="text-gray-400">Pushing boundaries with emerging tech, AI, and creative problem-solving</p>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="150">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-purple-500/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-4">👁️</div>
-          <h4 class="text-xl font-bold text-white mb-3">Transparency</h4>
-          <p class="text-gray-400">Clear communication, honest partnerships, and accountability in all dealings</p>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="200">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-cyan-500/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-4">📈</div>
-          <h4 class="text-xl font-bold text-white mb-3">Scalability</h4>
-          <p class="text-gray-400">Building future-proof solutions that grow with your business needs</p>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="250">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-blue-500/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-4">😊</div>
-          <h4 class="text-xl font-bold text-white mb-3">Customer Success</h4>
-          <p class="text-gray-400">Your success is our success - dedicated support and long-term partnerships</p>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="300">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-purple-500/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-4">⚡</div>
-          <h4 class="text-xl font-bold text-white mb-3">Quality Engineering</h4>
-          <p class="text-gray-400">Uncompromising excellence in code, architecture, and delivery</p>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="350">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-teal-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-cyan-500/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-4">📚</div>
-          <h4 class="text-xl font-bold text-white mb-3">Continuous Learning</h4>
-          <p class="text-gray-400">Investing in team growth and staying ahead of technological evolution</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. WHY CHOOSE US SECTION -->
-<section class="py-24 border-t border-white/10 bg-gradient-to-b from-blue-500/5 to-transparent">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">
-        Why Choose <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">InnovanceTechLabs</span>
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Enterprise-grade advantages that matter</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="group relative" data-aos="fade-up" data-aos-delay="100">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <h4 class="text-xl font-bold text-white">Experienced Engineering Team</h4>
-            <lucide-icon [img]="UsersIcon" class="w-8 h-8 text-blue-400 flex-shrink-0"></lucide-icon>
-          </div>
-          <p class="text-gray-400 mb-4">Top 1% engineers with average 12+ years of enterprise experience</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Industry-certified architects</li>
-            <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Award-winning developers</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="150">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-purple-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <h4 class="text-xl font-bold text-white">Modern Tech Stack</h4>
-            <lucide-icon [img]="CodeIcon" class="w-8 h-8 text-purple-400 flex-shrink-0"></lucide-icon>
-          </div>
-          <p class="text-gray-400 mb-4">Latest frameworks and tools for maximum performance</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-purple-400">→</span> Cloud-native architecture</li>
-            <li class="flex items-center gap-2"><span class="text-purple-400">→</span> AI & ML integration</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="200">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-cyan-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <h4 class="text-xl font-bold text-white">Agile Delivery</h4>
-            <lucide-icon [img]="ZapIcon" class="w-8 h-8 text-cyan-400 flex-shrink-0"></lucide-icon>
-          </div>
-          <p class="text-gray-400 mb-4">Rapid iterations with transparent progress tracking</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-cyan-400">→</span> 2-week sprint cycles</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400">→</span> Continuous deployment</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="250">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <h4 class="text-xl font-bold text-white">Cloud & AI Expertise</h4>
-            <lucide-icon [img]="CloudIcon" class="w-8 h-8 text-blue-400 flex-shrink-0"></lucide-icon>
-          </div>
-          <p class="text-gray-400 mb-4">Certified cloud architects with deep AI/ML knowledge</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Azure & AWS certified</li>
-            <li class="flex items-center gap-2"><span class="text-blue-400">→</span> AI automation specialists</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="300">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-purple-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <h4 class="text-xl font-bold text-white">Secure Architecture</h4>
-            <lucide-icon [img]="ShieldCheckIcon" class="w-8 h-8 text-purple-400 flex-shrink-0"></lucide-icon>
-          </div>
-          <p class="text-gray-400 mb-4">Enterprise-grade security with compliance certifications</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-purple-400">→</span> ISO 27001 certified</li>
-            <li class="flex items-center gap-2"><span class="text-purple-400">→</span> GDPR & HIPAA compliant</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="350">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-teal-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-cyan-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-center justify-between mb-6">
-            <h4 class="text-xl font-bold text-white">Long-Term Support</h4>
-            <div class="text-2xl">🎧</div>
-          </div>
-          <p class="text-gray-400 mb-4">24/7 dedicated support and continuous optimization</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-cyan-400">→</span> SLA guarantees</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400">→</span> Proactive maintenance</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. TECHNOLOGY EXPERTISE SECTION -->
-<section class="py-24 relative overflow-hidden bg-gradient-to-b from-transparent via-purple-500/5 to-transparent">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">
-        Technology <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Expertise</span>
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Mastery across modern technology landscape</p>
-    </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-      <div class="group relative" *ngFor="let tech of technologies" data-aos="fade-up">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 text-center group cursor-pointer">
-          <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-            {{ tech.icon }}
-          </div>
-          <p class="text-white font-semibold text-sm">{{ tech.name }}</p>
-          <p class="text-gray-500 text-xs mt-2">{{ tech.level }}</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="group relative" data-aos="fade-up" data-aos-delay="100">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-blue-500/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <h4 class="text-lg font-bold text-white mb-3">Backend & Cloud</h4>
-          <p class="text-gray-400 text-sm mb-4">.NET Core, Node.js, Python, Java, Azure, AWS, Docker, Kubernetes</p>
-          <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-            <div class="h-full w-11/12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="150">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-purple-500/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <h4 class="text-lg font-bold text-white mb-3">Frontend & UI</h4>
-          <p class="text-gray-400 text-sm mb-4">Angular, React, Next.js, Vue, TypeScript, Tailwind CSS, Web3</p>
-          <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-            <div class="h-full w-11/12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="200">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-cyan-500/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-          <h4 class="text-lg font-bold text-white mb-3">Data & AI</h4>
-          <p class="text-gray-400 text-sm mb-4">Power BI, SQL Server, PostgreSQL, MongoDB, ML/AI Integration, Analytics</p>
-          <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-            <div class="h-full w-10/12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 7. COMPANY CULTURE SECTION -->
-<section class="py-24 relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">
-        Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Culture</span>
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Where innovation thrives and talent grows</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="group relative" data-aos="fade-up" data-aos-delay="100">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-start gap-4">
-            <div class="text-3xl mt-1">❤️</div>
-            <div>
-              <h4 class="text-xl font-bold text-white mb-3">Collaboration</h4>
-              <p class="text-gray-400">Cross-functional teams working together toward shared goals. Daily standups, knowledge sharing, and collective problem-solving.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="150">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-purple-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-start gap-4">
-            <div class="text-3xl mt-1">🔥</div>
-            <div>
-              <h4 class="text-xl font-bold text-white mb-3">Innovation Culture</h4>
-              <p class="text-gray-400">Hackathons, R&D time, and innovation labs where team members explore cutting-edge technologies and ideas.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="200">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-cyan-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-start gap-4">
-            <div class="text-3xl mt-1">📖</div>
-            <div>
-              <h4 class="text-xl font-bold text-white mb-3">Continuous Learning</h4>
-              <p class="text-gray-400">Certifications, conferences, online courses, and mentorship programs to keep skills cutting-edge.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="250">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-start gap-4">
-            <div class="text-3xl mt-1">📈</div>
-            <div>
-              <h4 class="text-xl font-bold text-white mb-3">Team Growth</h4>
-              <p class="text-gray-400">Career progression, leadership development, and skill advancement opportunities at every level.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="300">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-purple-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-start gap-4">
-            <div class="text-3xl mt-1">🏠</div>
-            <div>
-              <h4 class="text-xl font-bold text-white mb-3">Hybrid Workplace</h4>
-              <p class="text-gray-400">Flexible work arrangements with modern offices for collaboration and creative brainstorming sessions.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="350">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-teal-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-cyan-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="flex items-start gap-4">
-            <div class="text-3xl mt-1">🤖</div>
-            <div>
-              <h4 class="text-xl font-bold text-white mb-3">AI-Powered Workplace</h4>
-              <p class="text-gray-400">Automation tools, AI assistants, and intelligent workflows to eliminate repetitive tasks and maximize productivity.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8. STATS / ACHIEVEMENTS SECTION -->
-<section class="py-24 relative overflow-hidden bg-gradient-to-b from-blue-500/5 to-transparent border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">
-        Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Achievements</span>
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Proven track record of delivering enterprise solutions</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="group relative text-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-3" [attr.data-count]="15">
-            {{ animatedStats[0] }}+
-          </div>
-          <p class="text-gray-400 font-semibold">Years of Experience</p>
-          <p class="text-gray-500 text-sm mt-2">Serving global enterprises since 2009</p>
-        </div>
-      </div>
-
-      <div class="group relative text-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-purple-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-3" [attr.data-count]="150">
-            {{ animatedStats[1] }}+
-          </div>
-          <p class="text-gray-400 font-semibold">Projects Delivered</p>
-          <p class="text-gray-500 text-sm mt-2">Across multiple industries and domains</p>
-        </div>
-      </div>
-
-      <div class="group relative text-center" data-aos="fade-up" data-aos-delay="200">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-cyan-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-3" [attr.data-count]="98">
-            {{ animatedStats[2] }}%
-          </div>
-          <p class="text-gray-400 font-semibold">Client Satisfaction</p>
-          <p class="text-gray-500 text-sm mt-2">Consistently exceeding expectations</p>
-        </div>
-      </div>
-
-      <div class="group relative text-center" data-aos="fade-up" data-aos-delay="250">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-3" [attr.data-count]="45">
-            {{ animatedStats[3] }}+
-          </div>
-          <p class="text-gray-400 font-semibold">Technologies Mastered</p>
-          <p class="text-gray-500 text-sm mt-2">From legacy to cutting-edge stacks</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Additional Stats Row -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-      <div class="group relative text-center" data-aos="fade-up" data-aos-delay="300">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-purple-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-3">24/7</div>
-          <p class="text-gray-400 font-semibold">Support Availability</p>
-          <p class="text-gray-500 text-sm mt-2">Global teams across time zones</p>
-        </div>
-      </div>
-
-      <div class="group relative text-center" data-aos="fade-up" data-aos-delay="350">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-teal-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-cyan-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400 mb-3" [attr.data-count]="50">
-            {{ animatedStats[4] }}+
-          </div>
-          <p class="text-gray-400 font-semibold">Enterprise Clients</p>
-          <p class="text-gray-500 text-sm mt-2">Fortune 500 to scaling startups</p>
-        </div>
-      </div>
-
-      <div class="group relative text-center" data-aos="fade-up" data-aos-delay="400">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-3" [attr.data-count]="12">
-            {{ animatedStats[5] }}+
-          </div>
-          <p class="text-gray-400 font-semibold">Countries Served</p>
-          <p class="text-gray-500 text-sm mt-2">Truly global delivery capabilities</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 9. INDUSTRIES SERVED SECTION -->
-<section class="py-24 relative overflow-hidden bg-gradient-to-b from-transparent via-purple-500/5 to-transparent">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">
-        Industries <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">We Serve</span>
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Expertise across diverse sectors and verticals</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="group relative" *ngFor="let industry of industries" data-aos="fade-up">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-        <div class="relative p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 cursor-pointer group">
-          <lucide-icon [img]="industry.icon" class="w-10 h-10 text-blue-400 mb-4 group-hover:text-purple-400 transition-colors duration-300"></lucide-icon>
-          <h4 class="text-lg font-bold text-white mb-2">{{ industry.name }}</h4>
-          <p class="text-gray-400 text-sm">{{ industry.description }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 10. FUTURE VISION / AI INNOVATION SECTION -->
-<section class="py-24 relative overflow-hidden border-t border-white/10">
-  <div class="absolute inset-0 z-0">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">
-        The Future of <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Enterprise Tech</span>
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">Our vision for 2026 and beyond</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="group relative" data-aos="fade-up" data-aos-delay="100">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-6">🧠</div>
-          <h4 class="text-2xl font-bold text-white mb-4">AI & Intelligent Automation</h4>
-          <p class="text-gray-400 mb-4">Next-generation AI models integrated natively into enterprise platforms, enabling autonomous workflows, predictive analytics, and intelligent decision-making systems.</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-blue-400">◆</span> Generative AI for code & content</li>
-            <li class="flex items-center gap-2"><span class="text-blue-400">◆</span> Autonomous process optimization</li>
-            <li class="flex items-center gap-2"><span class="text-blue-400">◆</span> Real-time data intelligence</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="150">
-        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-purple-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-6">☁️⚡</div>
-          <h4 class="text-2xl font-bold text-white mb-4">Cloud-Native Architecture</h4>
-          <p class="text-gray-400 mb-4">Serverless-first design patterns, edge computing, and distributed systems that scale infinitely while reducing operational overhead and cost.</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-purple-400">◆</span> Edge-AI integration</li>
-            <li class="flex items-center gap-2"><span class="text-purple-400">◆</span> Multi-cloud orchestration</li>
-            <li class="flex items-center gap-2"><span class="text-purple-400">◆</span> Zero-trust security</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="200">
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-blue-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-cyan-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-6">⚡</div>
-          <h4 class="text-2xl font-bold text-white mb-4">Intelligent Applications</h4>
-          <p class="text-gray-400 mb-4">Applications that learn, adapt, and improve themselves. Context-aware interfaces, personalization engines, and systems that anticipate user needs.</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-cyan-400">◆</span> Contextual user experiences</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400">◆</span> Self-optimizing systems</li>
-            <li class="flex items-center gap-2"><span class="text-cyan-400">◆</span> Predictive personalization</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="group relative" data-aos="fade-up" data-aos-delay="250">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-        <div class="relative p-8 rounded-2xl border border-blue-500/30 bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
-          <div class="text-3xl mb-6">🌐</div>
-          <h4 class="text-2xl font-bold text-white mb-4">Digital Ecosystems</h4>
-          <p class="text-gray-400 mb-4">Interconnected systems that break silos and enable seamless collaboration across organizations, partners, and customers globally.</p>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li class="flex items-center gap-2"><span class="text-blue-400">◆</span> API-first architecture</li>
-            <li class="flex items-center gap-2"><span class="text-blue-400">◆</span> Blockchain integration</li>
-            <li class="flex items-center gap-2"><span class="text-blue-400">◆</span> Real-time collaboration</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 11. CTA SECTION -->
-<section class="py-32 relative overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
-    <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-  </div>
-
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="zoom-in">
-    <h2 class="text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white">
-      Let's Build the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-purple-400">Future</span> Together
-    </h2>
-
-    <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-      Ready to transform your business with cutting-edge technology, AI innovation, and world-class engineering? Let's create something extraordinary.
-    </p>
-
-    <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-      <button class="px-10 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-lg rounded-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1">
-        Schedule a Consultation
-      </button>
-      <button class="px-10 py-4 border-2 border-purple-500 text-purple-400 font-bold text-lg rounded-lg hover:bg-purple-500/20 transition-all duration-300 backdrop-blur">
-        View Case Studies
-      </button>
-    </div>
-
-    <p class="text-gray-400 text-sm">
-      Join 100+ enterprises transforming their digital future with InnovanceTechLabs
-    </p>
-  </div>
-</section>
-
-<!-- 12. CONTACT SECTION -->
-<section class="py-24 border-t border-white/10 bg-white/[0.02]">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <!-- Contact Info -->
-      <div data-aos="fade-up">
-        <h4 class="text-white font-bold text-lg mb-6">Contact Info</h4>
-        <div class="space-y-4 text-gray-400 text-sm">
-          <div class="flex items-start gap-3">
-            <lucide-icon [img]="MapPinIcon" class="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0"></lucide-icon>
-            <p>Global Headquarters<br>Innovation Hub, Tech Valley</p>
-          </div>
-          <div class="flex items-center gap-3">
-            <lucide-icon [img]="PhoneIcon" class="w-5 h-5 text-blue-400 flex-shrink-0"></lucide-icon>
-            <p>+1 (800) INNOVATE</p>
-          </div>
-          <div class="flex items-center gap-3">
-            <lucide-icon [img]="MailIcon" class="w-5 h-5 text-blue-400 flex-shrink-0"></lucide-icon>
-            <p>hello&#64;innovancetech.com</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Services -->
-      <div data-aos="fade-up" data-aos-delay="100">
-        <h4 class="text-white font-bold text-lg mb-6">Services</h4>
-        <ul class="space-y-3 text-gray-400 text-sm">
-          <li><a href="#" class="hover:text-blue-400 transition-colors">Custom Software</a></li>
-          <li><a href="#" class="hover:text-blue-400 transition-colors">Web Development</a></li>
-          <li><a href="#" class="hover:text-blue-400 transition-colors">Mobile Apps</a></li>
-          <li><a href="#" class="hover:text-blue-400 transition-colors">Cloud Solutions</a></li>
-          <li><a href="#" class="hover:text-blue-400 transition-colors">AI & Automation</a></li>
-        </ul>
-      </div>
-
-      <!-- Company -->
-      <div data-aos="fade-up" data-aos-delay="200">
-        <h4 class="text-white font-bold text-lg mb-6">Company</h4>
-        <ul class="space-y-3 text-gray-400 text-sm">
-          <li><a href="#" class="hover:text-blue-400 transition-colors">About Us</a></li>
-          <li><a href="#" class="hover:text-blue-400 transition-colors">Careers</a></li>
-          <li><a href="#" class="hover:text-blue-400 transition-colors">Blog</a></li>
-          <li><a href="#" class="hover:text-blue-400 transition-colors">Press</a></li>
-          <li><a href="#" class="hover:text-blue-400 transition-colors">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Newsletter -->
-      <div data-aos="fade-up" data-aos-delay="300">
-        <h4 class="text-white font-bold text-lg mb-6">Newsletter</h4>
-        <p class="text-gray-400 text-sm mb-4">Subscribe for insights on enterprise tech and innovation</p>
-        <div class="flex gap-2">
-          <input type="email" placeholder="your@email.com" class="flex-1 px-4 py-2 rounded bg-white/10 border border-white/20 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-blue-500 transition-colors">
-          <button class="px-4 py-2 bg-blue-500 text-white rounded font-semibold text-sm hover:bg-blue-600 transition-colors">
-            →
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Bottom -->
-    <div class="mt-12 pt-8 border-t border-white/10">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-gray-500 text-sm">
-          &copy; 2026 InnovanceTechLabs. All rights reserved.
-        </div>
-        <div class="flex gap-6">
-          <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
-            <lucide-icon [img]="LinkedinIcon" class="w-5 h-5"></lucide-icon>
-          </a>
-          <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
-            <lucide-icon [img]="TwitterIcon" class="w-5 h-5"></lucide-icon>
-          </a>
-          <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">
-            <lucide-icon [img]="GithubIcon" class="w-5 h-5"></lucide-icon>
-          </a>
-          <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-lg">
-            f
-          </a>
-        </div>
+<section class="itl-section itl-consultation relative overflow-hidden">
+  <div class="itl-page-shell text-center">
+    <div class="mx-auto max-w-3xl" data-aos="zoom-in">
+      <p class="itl-section-kicker itl-kicker-dark">Next Step</p>
+      <h2 class="itl-section-title itl-title-dark mx-auto mt-4">Let us help you define the right technology path.</h2>
+      <p class="mt-6 text-lg leading-8 text-slate-300">
+        Bring us a product idea, workflow problem, legacy system, cloud challenge, or training need. We will help shape it into a practical roadmap.
+      </p>
+      <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <a routerLink="/contact" class="itl-button itl-button-primary">
+          Start a Conversation
+          <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>
+        </a>
+        <a routerLink="/projects" class="itl-button itl-button-secondary">View Work</a>
       </div>
     </div>
   </div>

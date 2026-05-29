@@ -1,65 +1,240 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { LucideAngularModule, ArrowRight, Code, Database, Globe, Monitor, Cloud, Shield, CheckCircle, BrainCircuit, Cpu, Rocket, Users, Settings, Zap, Network, Building2 } from 'lucide-angular';
 import { CommonModule } from '@angular/common';
+import {
+  ArrowRight,
+  Bot,
+  BrainCircuit,
+  Building2,
+  CheckCircle,
+  CloudCog,
+  Code,
+  Cpu,
+  Database,
+  Gauge,
+  Globe,
+  Handshake,
+  Layers,
+  Mail,
+  MapPin,
+  MessageCircle,
+  MonitorSmartphone,
+  Phone,
+  Rocket,
+  ShieldCheck,
+  Sparkles,
+  Users,
+  Workflow,
+  Zap
+} from 'lucide-angular';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, LucideAngularModule, CommonModule],
+  imports: [CommonModule, RouterLink, LucideAngularModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
   readonly ArrowRightIcon = ArrowRight;
-  readonly CheckCircleIcon = CheckCircle;
-  readonly GlobeIcon = Globe;
+  readonly BotIcon = Bot;
   readonly BrainCircuitIcon = BrainCircuit;
-  readonly CpuIcon = Cpu;
-  readonly UsersIcon = Users;
+  readonly CheckCircleIcon = CheckCircle;
+  readonly GaugeIcon = Gauge;
+  readonly GlobeIcon = Globe;
+  readonly HandshakeIcon = Handshake;
+  readonly MailIcon = Mail;
+  readonly MapPinIcon = MapPin;
+  readonly MessageCircleIcon = MessageCircle;
+  readonly PhoneIcon = Phone;
   readonly RocketIcon = Rocket;
+  readonly ShieldCheckIcon = ShieldCheck;
+  readonly SparklesIcon = Sparkles;
+  readonly WorkflowIcon = Workflow;
   readonly ZapIcon = Zap;
-  readonly SettingsIcon = Settings;
-  readonly NetworkIcon = Network;
-  readonly Building2Icon = Building2;
-  
+
+  heroMetrics = [
+    { value: '50+', label: 'Digital products shipped' },
+    { value: '24/7', label: 'Cloud and support mindset' },
+    { value: '8', label: 'Core engineering capabilities' }
+  ];
+
   services = [
-    { title: 'Web Development', desc: 'Scalable modern web applications and immersive digital experiences.', icon: Monitor, delay: 100 },
-    { title: 'Mobile App Development', desc: 'Native and cross-platform mobile solutions.', icon: Zap, delay: 200 },
-    { title: 'Cloud Solutions', desc: 'AWS & Azure cloud architecture, migration, and scaling.', icon: Cloud, delay: 300 },
-    { title: 'AI Automation', desc: 'Predictive analytics, NLP, and intelligent workflows.', icon: BrainCircuit, delay: 400 },
-    { title: 'Dashboards & Analytics', desc: 'Real-time data visualization and business intelligence.', icon: Database, delay: 500 },
-    { title: 'Software Testing', desc: 'Enterprise-grade QA, automation, and security testing.', icon: Shield, delay: 600 },
-    { title: 'Corporate Training', desc: 'Upskilling teams with modern technologies.', icon: Users, delay: 700 },
-    { title: 'Custom Enterprise Software', desc: 'Tailored solutions for complex business needs.', icon: Building2, delay: 800 }
+    {
+      title: 'Custom Software Development',
+      desc: 'Enterprise platforms, workflow systems, integrations, and secure architecture built around your business model.',
+      icon: Code,
+      tag: 'Architecture'
+    },
+    {
+      title: 'Web Development',
+      desc: 'High-performance websites, portals, SaaS frontends, and Angular experiences designed for conversion and scale.',
+      icon: Globe,
+      tag: 'Frontend'
+    },
+    {
+      title: 'Mobile App Development',
+      desc: 'Modern mobile apps with smooth journeys, reliable APIs, and release-ready product engineering.',
+      icon: MonitorSmartphone,
+      tag: 'iOS + Android'
+    },
+    {
+      title: 'Cloud Solutions',
+      desc: 'Cloud migration, DevOps, infrastructure automation, monitoring, and resilient deployment pipelines.',
+      icon: CloudCog,
+      tag: 'AWS + Azure'
+    },
+    {
+      title: 'AI & Automation',
+      desc: 'AI-assisted workflows, predictive systems, intelligent assistants, and automation that reduces operational drag.',
+      icon: BrainCircuit,
+      tag: 'Intelligence'
+    },
+    {
+      title: 'Dashboard & Analytics',
+      desc: 'Executive dashboards, Power BI experiences, live metrics, and decision systems connected to trusted data.',
+      icon: Database,
+      tag: 'Insights'
+    },
+    {
+      title: 'Testing & QA',
+      desc: 'Manual and automated quality practices that harden performance, usability, accessibility, and security.',
+      icon: ShieldCheck,
+      tag: 'Quality'
+    },
+    {
+      title: 'Corporate IT Training',
+      desc: 'Practical upskilling programs for engineering teams across cloud, web, data, QA, and AI practices.',
+      icon: Users,
+      tag: 'Enablement'
+    }
   ];
 
-  whyChooseUs = [
-    { title: 'Experienced Developers', icon: Code },
-    { title: 'Scalable Architecture', icon: Network },
-    { title: 'Agile Development', icon: Rocket },
-    { title: 'Modern Tech Stack', icon: Cpu },
-    { title: 'Secure & Cloud Ready Solutions', icon: Shield },
-    { title: 'Long-Term Technical Support', icon: Settings }
+  differentiators = [
+    {
+      title: 'Strategy Before Code',
+      desc: 'We clarify outcomes, users, constraints, and success metrics before a single sprint begins.',
+      icon: Sparkles,
+      stat: '01'
+    },
+    {
+      title: 'Product-Grade Engineering',
+      desc: 'Every interface, API, and workflow is designed to feel polished, reliable, and easy to evolve.',
+      icon: Cpu,
+      stat: '02'
+    },
+    {
+      title: 'Cloud-Native Delivery',
+      desc: 'Secure infrastructure, CI/CD, observability, and release discipline are baked into the delivery path.',
+      icon: CloudCog,
+      stat: '03'
+    },
+    {
+      title: 'Long-Term Partnership',
+      desc: 'We stay close after launch with iteration, support, knowledge transfer, and measurable improvement.',
+      icon: Handshake,
+      stat: '04'
+    }
   ];
 
-  techStack = [
-    '.NET', 'Angular', 'React', 'Azure', 'AWS', 'Node.js', 'SQL Server', 'Docker', 'Kubernetes', 'AI Tools',
-    '.NET', 'Angular', 'React', 'Azure', 'AWS', 'Node.js', 'SQL Server', 'Docker', 'Kubernetes', 'AI Tools' // Duplicated for marquee effect
+  techStackGroups = [
+    {
+      category: 'Frontend',
+      tools: ['Angular', 'React', 'TypeScript', 'Tailwind CSS', 'Web APIs']
+    },
+    {
+      category: 'Backend',
+      tools: ['.NET Core', 'Node.js', 'REST APIs', 'SQL Server', 'PostgreSQL']
+    },
+    {
+      category: 'Cloud + DevOps',
+      tools: ['Azure', 'AWS', 'Docker', 'Kubernetes', 'CI/CD']
+    },
+    {
+      category: 'AI + Data',
+      tools: ['Python', 'Power BI', 'Automation', 'Analytics', 'ML Workflows']
+    }
+  ];
+
+  portfolio = [
+    {
+      title: 'AI Analytics Command Center',
+      eyebrow: 'Dashboard & Analytics',
+      desc: 'A real-time decision cockpit for leadership teams with predictive signals, anomaly alerts, and governed reporting.',
+      image: '/images/project1.png',
+      results: ['94% insight accuracy', '40+ reporting hours saved']
+    },
+    {
+      title: 'Cloud Infrastructure Modernization',
+      eyebrow: 'Cloud Solutions',
+      desc: 'A resilient cloud migration program with automated deployments, observability, and cost-aware scaling.',
+      image: '/images/project2.png',
+      results: ['10x scaling headroom', '40% infrastructure savings']
+    },
+    {
+      title: 'Enterprise Workflow Platform',
+      eyebrow: 'Custom Software',
+      desc: 'A secure operations platform connecting approvals, ERP data, field teams, and executive dashboards.',
+      image: '/images/company-culture.png',
+      results: ['Unified operations', 'Faster release cycles']
+    }
   ];
 
   processSteps = [
-    { step: '01', title: 'Discovery', desc: 'Understanding your vision and business requirements.' },
-    { step: '02', title: 'Planning', desc: 'Architecting the solution and defining the roadmap.' },
-    { step: '03', title: 'Development', desc: 'Agile execution with continuous feedback loops.' },
-    { step: '04', title: 'Testing', desc: 'Rigorous QA to ensure security and performance.' },
-    { step: '05', title: 'Deployment', desc: 'Seamless launch and cloud infrastructure setup.' },
-    { step: '06', title: 'Support', desc: '24/7 maintenance and continuous improvements.' }
+    {
+      step: '01',
+      title: 'Discover',
+      desc: 'Understand the business goal, users, systems, risk, and opportunity.'
+    },
+    {
+      step: '02',
+      title: 'Architect',
+      desc: 'Define the product blueprint, data model, integrations, and delivery roadmap.'
+    },
+    {
+      step: '03',
+      title: 'Prototype',
+      desc: 'Validate key flows with high-fidelity UX and fast technical proof points.'
+    },
+    {
+      step: '04',
+      title: 'Build',
+      desc: 'Ship in focused sprints with clean engineering, reviews, and demos.'
+    },
+    {
+      step: '05',
+      title: 'Assure',
+      desc: 'Test usability, security, performance, and release readiness before launch.'
+    },
+    {
+      step: '06',
+      title: 'Scale',
+      desc: 'Deploy, monitor, optimize, and keep improving the product after release.'
+    }
   ];
 
   testimonials = [
-    { quote: "Innovance TechLabs completely transformed our legacy systems into a modern, lightning-fast platform. The AI integration was a game changer.", author: "Sarah Jenkins, CTO at NexusCorp" },
-    { quote: "The dashboard they built for us saves over 40 hours of manual reporting every week. Their expertise in enterprise solutions is unmatched.", author: "Michael Chen, Data Director" },
-    { quote: "Top-tier talent. Their developers integrated seamlessly with our in-house team, delivering high-quality code ahead of schedule.", author: "Emma Watson, VP Engineering" }
+    {
+      quote: 'Innovance TechLabs helped us turn a scattered workflow into a clean, measurable platform. The team understood both the product and the engineering depth we needed.',
+      author: 'Priya Shah',
+      role: 'Operations Director, Growth Platform'
+    },
+    {
+      quote: 'Their dashboard work made our leadership reviews dramatically faster. The experience feels premium, but the backend is where the real discipline shows.',
+      author: 'Daniel Mehta',
+      role: 'Head of Data, SaaS Company'
+    },
+    {
+      quote: 'We needed a partner who could move quickly without creating technical debt. Innovance delivered with clarity, ownership, and excellent communication.',
+      author: 'Aarav Patel',
+      role: 'Founder, Cloud Services Startup'
+    }
+  ];
+
+  consultationHighlights = [
+    'Product and architecture review',
+    'Cloud, AI, and automation opportunities',
+    'Roadmap with practical next steps'
   ];
 }

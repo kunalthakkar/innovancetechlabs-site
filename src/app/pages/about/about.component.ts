@@ -1,143 +1,105 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  LucideAngularModule,
-  Target,
-  Eye,
-  ShieldCheck,
-  Zap,
-  Rocket,
-  Users,
-  Code,
-  Cloud,
-  BookOpen,
-  Network,
-  MapPin,
-  Phone,
-  Mail,
-  Linkedin,
-  Twitter,
-  Github,
-  Building2,
-  GraduationCap
-} from 'lucide-angular';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import {
+  ArrowRight,
+  BrainCircuit,
+  CheckCircle,
+  CloudCog,
+  Code,
+  Cpu,
+  Eye,
+  Globe,
+  Handshake,
+  Layers,
+  Rocket,
+  ShieldCheck,
+  Sparkles,
+  Target,
+  Users,
+  Zap
+} from 'lucide-angular';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [LucideAngularModule, CommonModule],
+  imports: [CommonModule, RouterLink, LucideAngularModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent implements OnInit {
-  // Icons
-  readonly TargetIcon = Target;
-  readonly EyeIcon = Eye;
-  readonly ShieldCheckIcon = ShieldCheck;
-  readonly ZapIcon = Zap;
-  readonly RocketIcon = Rocket;
-  readonly UsersIcon = Users;
+export class AboutComponent {
+  readonly ArrowRightIcon = ArrowRight;
+  readonly BrainCircuitIcon = BrainCircuit;
+  readonly CheckCircleIcon = CheckCircle;
+  readonly CloudCogIcon = CloudCog;
   readonly CodeIcon = Code;
-  readonly CloudIcon = Cloud;
-  readonly BookOpenIcon = BookOpen;
-  readonly NetworkIcon = Network;
-  readonly MapPinIcon = MapPin;
-  readonly PhoneIcon = Phone;
-  readonly MailIcon = Mail;
-  readonly LinkedinIcon = Linkedin;
-  readonly TwitterIcon = Twitter;
-  readonly GithubIcon = Github;
-  readonly Building2Icon = Building2;
-  readonly GraduationCapIcon = GraduationCap;
+  readonly CpuIcon = Cpu;
+  readonly EyeIcon = Eye;
+  readonly GlobeIcon = Globe;
+  readonly HandshakeIcon = Handshake;
+  readonly LayersIcon = Layers;
+  readonly RocketIcon = Rocket;
+  readonly ShieldCheckIcon = ShieldCheck;
+  readonly SparklesIcon = Sparkles;
+  readonly TargetIcon = Target;
+  readonly UsersIcon = Users;
+  readonly ZapIcon = Zap;
 
-  // Animated stats
-  animatedStats = [0, 0, 0, 0, 0, 0];
-
-  // Technologies
-  technologies = [
-    { name: '.NET Core', level: 'Expert', icon: '⚡' },
-    { name: 'Angular', level: 'Expert', icon: '🔴' },
-    { name: 'React', level: 'Expert', icon: '⚛️' },
-    { name: 'Azure', level: 'Expert', icon: '☁️' },
-    { name: 'AWS', level: 'Expert', icon: '📦' },
-    { name: 'Docker', level: 'Expert', icon: '🐳' },
-    { name: 'Kubernetes', level: 'Expert', icon: '⚙️' },
-    { name: 'AI/ML', level: 'Advanced', icon: '🤖' },
-    { name: 'Power BI', level: 'Expert', icon: '📊' },
-    { name: 'SQL Server', level: 'Expert', icon: '🗄️' },
-    { name: 'PostgreSQL', level: 'Advanced', icon: '🐘' },
-    { name: 'Node.js', level: 'Expert', icon: '🟢' }
+  stats = [
+    { value: '50+', label: 'Products, platforms, and digital experiences delivered' },
+    { value: '8', label: 'Core service lines across software, cloud, AI, QA, and training' },
+    { value: '24/7', label: 'Support mindset for launches, production systems, and teams' }
   ];
 
-  // Industries
-  industries = [
+  values = [
     {
-      name: 'Healthcare',
-      icon: Zap,
-      description: 'HIPAA-compliant solutions for patient management, telemedicine, and medical records systems.'
+      title: 'Clarity',
+      desc: 'We simplify ambiguous technology decisions into a practical roadmap your team can trust.',
+      icon: Eye
     },
     {
-      name: 'Finance',
-      icon: Zap,
-      description: 'Secure fintech platforms, banking solutions, and compliance-ready financial systems.'
+      title: 'Engineering Depth',
+      desc: 'Architecture, security, performance, and maintainability guide every product decision.',
+      icon: Cpu
     },
     {
-      name: 'Retail',
-      icon: Zap,
-      description: 'E-commerce platforms, inventory management, and omnichannel retail solutions.'
+      title: 'Measurable Impact',
+      desc: 'Every sprint is tied to user outcomes, business goals, or operational improvement.',
+      icon: Target
     },
     {
-      name: 'Manufacturing',
-      icon: Zap,
-      description: 'IoT integration, supply chain optimization, and production management systems.'
-    },
-    {
-      name: 'Logistics',
-      icon: Zap,
-      description: 'Real-time tracking, route optimization, and warehouse management platforms.'
-    },
-    {
-      name: 'Education',
-      icon: GraduationCap,
-      description: 'Learning management systems, educational platforms, and student engagement tools.'
-    },
-    {
-      name: 'Real Estate',
-      icon: Building2,
-      description: 'Property management systems, virtual tours, and real estate transaction platforms.'
+      title: 'Long-Term Partnership',
+      desc: 'We build with ownership, document decisions, and stay close after launch.',
+      icon: Handshake
     }
   ];
 
-  constructor() {}
+  operatingPrinciples = [
+    'Product thinking before implementation',
+    'Cloud-ready and security-aware by default',
+    'Fast prototypes with a clear path to production',
+    'Transparent communication and practical documentation',
+    'Training and handover built into delivery'
+  ];
 
-  ngOnInit() {
-    // Animate stats on component load
-    this.animateStats();
-  }
+  capabilities = [
+    'Custom enterprise software',
+    'Modern web and mobile platforms',
+    'Cloud architecture and DevOps',
+    'AI automation and intelligent workflows',
+    'Dashboards, analytics, and data products',
+    'Testing, QA, and release readiness'
+  ];
 
-  animateStats() {
-    const targetValues = [15, 150, 98, 45, 50, 12];
-    const duration = 2000; // 2 seconds
-    const steps = 60; // 60 frames
-    const stepDuration = duration / steps;
-
-    let currentStep = 0;
-
-    const interval = setInterval(() => {
-      currentStep++;
-      const progress = currentStep / steps;
-
-      // Easing function for smooth animation
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-
-      this.animatedStats = targetValues.map(target => {
-        return Math.floor(target * easeOut);
-      });
-
-      if (currentStep >= steps) {
-        clearInterval(interval);
-        this.animatedStats = targetValues;
-      }
-    }, stepDuration);
-  }
+  industries = [
+    'Healthcare',
+    'Finance',
+    'Retail',
+    'Manufacturing',
+    'Education',
+    'Logistics',
+    'Real Estate',
+    'Professional Services'
+  ];
 }

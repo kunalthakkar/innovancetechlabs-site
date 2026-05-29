@@ -1,89 +1,70 @@
-<footer class="bg-dark-900 border-t border-white/5 pt-16 pb-8 relative overflow-hidden">
-  <!-- Decorative background glow -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent shadow-[0_0_20px_rgba(59,130,246,0.5)]"></div>
-  
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-      
-      <!-- Brand -->
-      <div class="col-span-1 md:col-span-2 lg:col-span-1">
-        <div class="flex items-center gap-3 mb-6 cursor-pointer" routerLink="/">
-          <div class="relative w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-primary-500 to-primary-800 shadow-[0_0_15px_rgba(59,130,246,0.5)]">
-            <lucide-icon [img]="BrainCircuitIcon" class="text-white w-6 h-6"></lucide-icon>
-          </div>
-          <span class="font-bold text-xl tracking-tight text-white">
-            Innovance <span class="text-gradient">TechLabs</span>
-          </span>
-        </div>
-        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-          Where Innovation meets Advancement. We build futuristic, scalable, and intelligent digital solutions for the enterprises of tomorrow.
+<footer class="itl-footer relative overflow-hidden">
+  <div class="itl-footer-line" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-[1.15fr_0.75fr_0.85fr_1fr]">
+      <div>
+        <a routerLink="/" aria-label="InnovanceTechLabs home">
+          <app-logo [size]="48" textScale="sm" [showSlogan]="true"></app-logo>
+        </a>
+        <p class="mt-6 max-w-sm text-sm leading-6 text-slate-400">
+          InnovanceTechLabs designs and engineers future-ready digital products, cloud platforms, AI automation, dashboards, and IT training experiences.
         </p>
-        <div class="flex space-x-4">
-          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300">
-            <lucide-icon [img]="TwitterIcon" class="w-5 h-5"></lucide-icon>
+        <div class="mt-6 flex gap-3">
+          <a href="#" class="itl-social-link" aria-label="Twitter">
+            <lucide-icon [img]="TwitterIcon" class="h-5 w-5"></lucide-icon>
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300">
-            <lucide-icon [img]="LinkedinIcon" class="w-5 h-5"></lucide-icon>
+          <a href="#" class="itl-social-link" aria-label="LinkedIn">
+            <lucide-icon [img]="LinkedinIcon" class="h-5 w-5"></lucide-icon>
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary-500 hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300">
-            <lucide-icon [img]="GithubIcon" class="w-5 h-5"></lucide-icon>
+          <a href="#" class="itl-social-link" aria-label="GitHub">
+            <lucide-icon [img]="GithubIcon" class="h-5 w-5"></lucide-icon>
           </a>
         </div>
       </div>
 
-      <!-- Quick Links -->
       <div>
-        <h3 class="text-white font-semibold mb-6">Quick Links</h3>
-        <ul class="space-y-3 text-sm">
-          <li><a routerLink="/about" class="text-gray-400 hover:text-primary-400 transition-colors">About Us</a></li>
-          <li><a routerLink="/services" class="text-gray-400 hover:text-primary-400 transition-colors">Services</a></li>
-          <li><a routerLink="/projects" class="text-gray-400 hover:text-primary-400 transition-colors">Projects</a></li>
-          <li><a routerLink="/training" class="text-gray-400 hover:text-primary-400 transition-colors">Training</a></li>
-          <li><a routerLink="/contact" class="text-gray-400 hover:text-primary-400 transition-colors">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div>
-        <h3 class="text-white font-semibold mb-6">Services</h3>
-        <ul class="space-y-3 text-sm">
-          <li><a routerLink="/services" class="text-gray-400 hover:text-primary-400 transition-colors">AI & Dashboard Development</a></li>
-          <li><a routerLink="/services" class="text-gray-400 hover:text-primary-400 transition-colors">Cloud Solutions (AWS/Azure)</a></li>
-          <li><a routerLink="/services" class="text-gray-400 hover:text-primary-400 transition-colors">Web & Mobile Apps</a></li>
-          <li><a routerLink="/services" class="text-gray-400 hover:text-primary-400 transition-colors">Power BI Analytics</a></li>
-          <li><a routerLink="/services" class="text-gray-400 hover:text-primary-400 transition-colors">QA & Testing Support</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h3 class="text-white font-semibold mb-6">Contact Us</h3>
-        <ul class="space-y-4 text-sm">
-          <li class="flex items-start gap-3">
-            <lucide-icon [img]="MapPinIcon" class="w-5 h-5 text-primary-500 shrink-0"></lucide-icon>
-            <span class="text-gray-400">Seventh Bliss, Gota,<br>Ahmedabad - 382481</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <lucide-icon [img]="PhoneIcon" class="w-5 h-5 text-primary-500 shrink-0"></lucide-icon>
-            <span class="text-gray-400">+91 9725287818</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <lucide-icon [img]="MailIcon" class="w-5 h-5 text-primary-500 shrink-0"></lucide-icon>
-            <span class="text-gray-400">innovancetechlabs&#64;gmail.com</span>
+        <h3 class="itl-footer-heading">Company</h3>
+        <ul class="mt-5 grid gap-3 text-sm">
+          <li *ngFor="let link of quickLinks">
+            <a [routerLink]="link.path" class="itl-footer-link">{{ link.label }}</a>
           </li>
         </ul>
       </div>
 
+      <div>
+        <h3 class="itl-footer-heading">Services</h3>
+        <ul class="mt-5 grid gap-3 text-sm">
+          <li *ngFor="let service of services">
+            <a routerLink="/services" class="itl-footer-link">{{ service }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="itl-footer-heading">Contact</h3>
+        <ul class="mt-5 grid gap-4 text-sm">
+          <li class="flex gap-3">
+            <lucide-icon [img]="MapPinIcon" class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300"></lucide-icon>
+            <span class="text-slate-400">Seventh Bliss, Gota, Ahmedabad - 382481</span>
+          </li>
+          <li class="flex gap-3">
+            <lucide-icon [img]="PhoneIcon" class="h-5 w-5 shrink-0 text-cyan-300"></lucide-icon>
+            <span class="text-slate-400">+91 9725287818</span>
+          </li>
+          <li class="flex gap-3">
+            <lucide-icon [img]="MailIcon" class="h-5 w-5 shrink-0 text-cyan-300"></lucide-icon>
+            <span class="text-slate-400">innovancetechlabs&#64;gmail.com</span>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-gray-500 text-sm">
-        &copy; {{ currentYear }} Innovance TechLabs. All rights reserved.
-      </p>
-      <div class="flex space-x-6 text-sm">
-        <a href="#" class="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
-        <a href="#" class="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+    <div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-7 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+      <p>&copy; {{ currentYear }} InnovanceTechLabs. All rights reserved.</p>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
       </div>
     </div>
   </div>
