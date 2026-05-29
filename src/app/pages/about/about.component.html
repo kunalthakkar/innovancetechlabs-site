@@ -1,164 +1,154 @@
-<section class="itl-page-hero itl-page-hero-about">
-  <div class="itl-page-hero-overlay"></div>
-  <div class="itl-page-shell relative z-10">
-    <div class="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-      <div class="itl-page-copy">
-        <div class="itl-eyebrow mb-6">
-          <lucide-icon [img]="SparklesIcon" class="h-4 w-4"></lucide-icon>
-          Where Innovation Meets Advancement
-        </div>
-        <h1 class="itl-page-title">We build technology with strategic clarity and engineering depth.</h1>
-        <p class="itl-page-lead">
-          InnovanceTechLabs partners with ambitious teams to design, modernize, automate, and scale software systems that are reliable in production and impressive in the hands of users.
-        </p>
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a routerLink="/contact" class="itl-button itl-button-primary">
-            Work With Us
-            <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>
-          </a>
-          <a routerLink="/services" class="itl-button itl-button-secondary">
-            Explore Capabilities
-            <lucide-icon [img]="LayersIcon" class="h-5 w-5"></lucide-icon>
-          </a>
-        </div>
-      </div>
-
-      <div class="itl-orbit-panel" aria-label="InnovanceTechLabs operating model">
-        <div class="itl-orbit-core">
-          <lucide-icon [img]="BrainCircuitIcon" class="h-12 w-12"></lucide-icon>
-        </div>
-        <span>Product</span>
-        <span>Cloud</span>
-        <span>AI</span>
-        <span>Scale</span>
-      </div>
+<section class="itl-page-hero">
+  <div class="itl-page-shell">
+    <p class="itl-eyebrow">
+      <lucide-icon [img]="SparklesIcon" class="h-4 w-4"></lucide-icon>
+      About Innovance TechLabs
+    </p>
+    <h1 class="itl-page-title mt-4">A focused technology partner for teams that need practical innovation.</h1>
+    <p class="itl-page-lead">
+      We help ambitious organizations design, modernize, automate, and scale software systems that are reliable in production and impressive in the hands of users.
+    </p>
+    <div class="itl-hero-actions">
+      <a routerLink="/contact" class="itl-button itl-button-primary">
+        Work With Us
+        <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>
+      </a>
+      <a routerLink="/services" class="itl-button itl-button-secondary">
+        Explore Capabilities
+        <lucide-icon [img]="LayersIcon" class="h-5 w-5"></lucide-icon>
+      </a>
     </div>
+  </div>
+</section>
 
-    <div class="mt-14 grid gap-4 md:grid-cols-3">
-      <div *ngFor="let stat of stats" class="itl-page-stat">
+<section class="itl-clientele" aria-label="Company metrics">
+  <div class="itl-shell">
+    <div class="itl-stats-grid">
+      <article *ngFor="let stat of stats" class="itl-stat-card">
         <strong>{{ stat.value }}</strong>
         <span>{{ stat.label }}</span>
-      </div>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="itl-section itl-section-bright relative overflow-hidden">
-  <div class="itl-page-shell">
-    <div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-      <div class="itl-media-frame" data-aos="fade-right">
-        <img src="/images/company-culture.png" alt="InnovanceTechLabs engineers collaborating on software and AI systems" loading="lazy">
-      </div>
-      <div data-aos="fade-left">
-        <p class="itl-section-kicker">Company Story</p>
-        <h2 class="itl-section-title mt-4">A focused software company for teams that need practical innovation.</h2>
-        <div class="mt-6 space-y-5 text-lg leading-8 text-slate-700">
-          <p>
-            InnovanceTechLabs was built around a simple belief: modern software should feel premium to use and disciplined under the hood. We help businesses move beyond scattered tools, fragile workflows, and slow decision cycles.
-          </p>
-          <p>
-            Our work blends business discovery, experience design, full-stack engineering, cloud architecture, analytics, AI automation, QA, and team enablement. The result is technology that supports growth instead of creating operational drag.
-          </p>
-        </div>
-      </div>
+<section class="itl-section">
+  <div class="itl-page-shell itl-split">
+    <div class="itl-media-frame" data-aos="fade-right">
+      <img src="/images/company-culture.png" alt="Innovance TechLabs team collaborating on software systems" loading="lazy" />
     </div>
-  </div>
-</section>
-
-<section class="itl-section relative overflow-hidden bg-[#050816]">
-  <div class="itl-circuit-bg" aria-hidden="true"></div>
-  <div class="itl-page-shell relative z-10">
-    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-      <p class="itl-section-kicker itl-kicker-dark">Mission & Vision</p>
-      <h2 class="itl-section-title itl-title-dark mt-4">Engineering digital systems that make organizations faster, smarter, and more resilient.</h2>
-    </div>
-
-    <div class="mt-12 grid gap-5 md:grid-cols-2">
-      <article class="itl-dark-card" data-aos="fade-up">
-        <lucide-icon [img]="TargetIcon" class="h-8 w-8 text-cyan-200"></lucide-icon>
-        <h3>Our Mission</h3>
+    <div data-aos="fade-left">
+      <p class="itl-section-kicker">Company Story</p>
+      <h2 class="itl-section-title">We build technology with strategic clarity and engineering depth.</h2>
+      <div class="mt-6 grid gap-5 text-[1.04rem] leading-8 text-slate-600">
         <p>
+          Innovance TechLabs was built around a simple belief: modern software should feel polished to use and disciplined under the hood.
+        </p>
+        <p>
+          Our work blends business discovery, product UX, full-stack engineering, cloud architecture, analytics, AI automation, QA, and team enablement. The result is technology that supports growth instead of creating operational drag.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="itl-section itl-section-muted">
+  <div class="itl-page-shell">
+    <div class="itl-section-head">
+      <div>
+        <p class="itl-section-kicker">How We Work</p>
+        <h2 class="itl-section-title">The values behind every engagement.</h2>
+      </div>
+      <p class="itl-section-text">
+        We bring a calm, senior engineering approach to decisions that often feel expensive, urgent, or technically messy.
+      </p>
+    </div>
+    <div class="itl-card-grid">
+      <article *ngFor="let value of values; let i = index" class="itl-service-card" data-aos="fade-up" [attr.data-aos-delay]="i * 90">
+        <div class="itl-icon-box">
+          <lucide-icon [img]="value.icon" class="h-6 w-6"></lucide-icon>
+        </div>
+        <h3 class="mt-6">{{ value.title }}</h3>
+        <p class="mt-3">{{ value.desc }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="itl-section itl-section-navy">
+  <div class="itl-page-shell">
+    <div class="itl-section-head-centered">
+      <p class="itl-section-kicker itl-kicker-light">Mission & Vision</p>
+      <h2 class="itl-section-title itl-title-light">Engineering digital systems that make organizations faster, smarter, and more resilient.</h2>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2">
+      <article class="itl-dark-card" data-aos="fade-up">
+        <lucide-icon [img]="TargetIcon" class="h-8 w-8 text-sky-300"></lucide-icon>
+        <h3 class="mt-5">Our Mission</h3>
+        <p class="mt-3">
           To help companies transform ideas, operations, and data into scalable digital products that deliver measurable value and long-term technical confidence.
         </p>
       </article>
       <article class="itl-dark-card" data-aos="fade-up" data-aos-delay="100">
-        <lucide-icon [img]="EyeIcon" class="h-8 w-8 text-amber-200"></lucide-icon>
-        <h3>Our Vision</h3>
-        <p>
-          To become a trusted global technology partner known for thoughtful product strategy, reliable execution, and future-ready engineering practices.
+        <lucide-icon [img]="EyeIcon" class="h-8 w-8 text-orange-300"></lucide-icon>
+        <h3 class="mt-5">Our Vision</h3>
+        <p class="mt-3">
+          To become a trusted technology partner known for thoughtful product strategy, reliable execution, and future-ready engineering practices.
         </p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="itl-section relative overflow-hidden bg-white">
-  <div class="itl-page-shell">
-    <div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-      <div data-aos="fade-right">
-        <p class="itl-section-kicker">How We Work</p>
-        <h2 class="itl-section-title mt-4">The values behind every engagement.</h2>
-        <p class="mt-5 text-lg leading-8 text-slate-600">
-          We bring a calm, senior engineering approach to decisions that often feel expensive, urgent, or technically messy.
-        </p>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-2">
-        <article *ngFor="let value of values; let i = index" class="itl-choice-card" data-aos="fade-up" [attr.data-aos-delay]="i * 90">
-          <div class="flex items-center justify-between">
-            <lucide-icon [img]="value.icon" class="h-7 w-7 text-cyan-600"></lucide-icon>
-            <span>0{{ i + 1 }}</span>
-          </div>
-          <h3 class="mt-6 text-lg font-semibold text-slate-950">{{ value.title }}</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">{{ value.desc }}</p>
-        </article>
-      </div>
+<section class="itl-section itl-section-blueprint">
+  <div class="itl-page-shell itl-split">
+    <div data-aos="fade-right">
+      <p class="itl-section-kicker">Operating System</p>
+      <h2 class="itl-section-title">A delivery model built around trust.</h2>
+      <p class="itl-section-text mt-5">
+        Clear discovery, practical architecture, frequent demos, quality gates, and team handover keep the work moving without surprises.
+      </p>
     </div>
-  </div>
-</section>
-
-<section class="itl-section itl-tech-section relative overflow-hidden">
-  <div class="itl-page-shell">
-    <div class="grid gap-8 lg:grid-cols-3">
-      <div class="lg:col-span-1" data-aos="fade-right">
-        <p class="itl-section-kicker itl-kicker-dark">Operating System</p>
-        <h2 class="itl-section-title itl-title-dark mt-4">A delivery model built around trust.</h2>
-      </div>
-      <div class="grid gap-3 md:grid-cols-2 lg:col-span-2">
-        <div *ngFor="let principle of operatingPrinciples" class="itl-check-row" data-aos="fade-up">
+    <div class="grid gap-3">
+      <div *ngFor="let principle of operatingPrinciples" class="itl-light-card p-4" data-aos="fade-up">
+        <span class="itl-mini-check">
           <lucide-icon [img]="CheckCircleIcon" class="h-5 w-5"></lucide-icon>
-          <span>{{ principle }}</span>
-        </div>
+          {{ principle }}
+        </span>
       </div>
     </div>
+  </div>
 
-    <div class="mt-12 grid gap-5 md:grid-cols-2">
-      <div class="itl-dark-card" data-aos="fade-up">
-        <lucide-icon [img]="CodeIcon" class="h-8 w-8 text-cyan-200"></lucide-icon>
-        <h3>Capabilities</h3>
+  <div class="itl-page-shell mt-12">
+    <div class="grid gap-5 md:grid-cols-2">
+      <div class="itl-service-card" data-aos="fade-up">
+        <lucide-icon [img]="CodeIcon" class="h-8 w-8 text-sky-600"></lucide-icon>
+        <h3 class="mt-5">Capabilities</h3>
         <div class="mt-5 flex flex-wrap gap-2">
-          <span *ngFor="let capability of capabilities" class="itl-chip-dark">{{ capability }}</span>
+          <span *ngFor="let capability of capabilities" class="itl-chip">{{ capability }}</span>
         </div>
       </div>
-      <div class="itl-dark-card" data-aos="fade-up" data-aos-delay="100">
-        <lucide-icon [img]="GlobeIcon" class="h-8 w-8 text-emerald-200"></lucide-icon>
-        <h3>Industries</h3>
+      <div class="itl-service-card" data-aos="fade-up" data-aos-delay="100">
+        <lucide-icon [img]="GlobeIcon" class="h-8 w-8 text-sky-600"></lucide-icon>
+        <h3 class="mt-5">Industries</h3>
         <div class="mt-5 flex flex-wrap gap-2">
-          <span *ngFor="let industry of industries" class="itl-chip-dark">{{ industry }}</span>
+          <span *ngFor="let industry of industries" class="itl-chip">{{ industry }}</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="itl-section itl-consultation relative overflow-hidden">
+<section class="itl-section">
   <div class="itl-page-shell text-center">
     <div class="mx-auto max-w-3xl" data-aos="zoom-in">
-      <p class="itl-section-kicker itl-kicker-dark">Next Step</p>
-      <h2 class="itl-section-title itl-title-dark mx-auto mt-4">Let us help you define the right technology path.</h2>
-      <p class="mt-6 text-lg leading-8 text-slate-300">
+      <p class="itl-section-kicker">Next Step</p>
+      <h2 class="itl-section-title mx-auto">Let us help you define the right technology path.</h2>
+      <p class="itl-section-text mx-auto mt-5">
         Bring us a product idea, workflow problem, legacy system, cloud challenge, or training need. We will help shape it into a practical roadmap.
       </p>
-      <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+      <div class="itl-section-actions justify-center">
         <a routerLink="/contact" class="itl-button itl-button-primary">
           Start a Conversation
           <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>

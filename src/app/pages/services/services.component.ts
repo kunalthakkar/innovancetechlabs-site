@@ -10,14 +10,14 @@ import {
   Database,
   Gauge,
   Globe,
+  Handshake,
   Layers,
   MonitorSmartphone,
   Rocket,
   ShieldCheck,
   Sparkles,
   Users,
-  Workflow,
-  Zap
+  Workflow
 } from 'lucide-angular';
 import { LucideAngularModule } from 'lucide-angular';
 
@@ -31,12 +31,7 @@ import { LucideAngularModule } from 'lucide-angular';
 export class ServicesComponent {
   readonly ArrowRightIcon = ArrowRight;
   readonly CheckCircleIcon = CheckCircle;
-  readonly GaugeIcon = Gauge;
-  readonly LayersIcon = Layers;
-  readonly RocketIcon = Rocket;
   readonly SparklesIcon = Sparkles;
-  readonly WorkflowIcon = Workflow;
-  readonly ZapIcon = Zap;
 
   services = [
     {
@@ -46,7 +41,7 @@ export class ServicesComponent {
       outcomes: ['Scalable architecture', 'Clean user journeys', 'Secure integrations']
     },
     {
-      title: 'Web Development',
+      title: 'Web Application Development',
       desc: 'Modern websites, SaaS frontends, enterprise portals, dashboards, and Angular or React applications with premium UI quality.',
       icon: Globe,
       outcomes: ['Responsive UX', 'SEO-friendly builds', 'Fast performance']
@@ -58,25 +53,25 @@ export class ServicesComponent {
       outcomes: ['Smooth app flows', 'API-first design', 'Release-ready builds']
     },
     {
-      title: 'Cloud Solutions',
+      title: 'Cloud Application Development',
       desc: 'Cloud migration, infrastructure design, DevOps automation, observability, deployments, and cost-aware scaling.',
       icon: CloudCog,
       outcomes: ['AWS and Azure', 'CI/CD pipelines', 'Production monitoring']
     },
     {
-      title: 'AI & Automation',
+      title: 'AI & Automation Services',
       desc: 'AI-assisted workflows, chat and document intelligence, predictive systems, and automation that removes repetitive work.',
       icon: BrainCircuit,
       outcomes: ['Workflow automation', 'AI assistants', 'Decision support']
     },
     {
-      title: 'Dashboard & Analytics',
+      title: 'Data, Dashboard & Analytics',
       desc: 'Operational dashboards, executive reporting, Power BI solutions, live metrics, and data experiences people actually use.',
       icon: Database,
       outcomes: ['Real-time views', 'Actionable metrics', 'Data storytelling']
     },
     {
-      title: 'Testing & QA',
+      title: 'Quality Engineering',
       desc: 'Manual and automated QA practices that improve reliability, performance, accessibility, security, and release confidence.',
       icon: ShieldCheck,
       outcomes: ['Test automation', 'Regression coverage', 'Launch readiness']
@@ -99,7 +94,7 @@ export class ServicesComponent {
       desc: 'Build premium interfaces and stable backend systems with frequent demos and review cycles.'
     },
     {
-      title: 'Cloud & Release',
+      title: 'Cloud, QA & Release',
       desc: 'Deploy with CI/CD, observability, performance checks, and support for production adoption.'
     }
   ];
@@ -111,5 +106,38 @@ export class ServicesComponent {
     'AI automation discovery',
     'Dashboard and reporting program',
     'Corporate training cohort'
+  ];
+
+  deliveryPrinciples = [
+    {
+      title: 'Product thinking first',
+      desc: 'Each service starts from the business outcome, user workflow, and measurable success criteria.',
+      icon: Layers
+    },
+    {
+      title: 'Cloud-ready by design',
+      desc: 'Architecture, deployments, observability, and scalability are planned before launch pressure arrives.',
+      icon: CloudCog
+    },
+    {
+      title: 'Security and QA habits',
+      desc: 'Access, data handling, testing, and release checks are treated as delivery fundamentals.',
+      icon: ShieldCheck
+    },
+    {
+      title: 'Practical speed',
+      desc: 'Prototype quickly where it reduces risk, then harden the right solution for production use.',
+      icon: Rocket
+    },
+    {
+      title: 'Transparent collaboration',
+      desc: 'Demos, documentation, and decision logs keep stakeholders aligned throughout the work.',
+      icon: Workflow
+    },
+    {
+      title: 'Long-term partnership',
+      desc: 'Launch support, team handover, and iteration are part of the engagement model.',
+      icon: Handshake
+    }
   ];
 }

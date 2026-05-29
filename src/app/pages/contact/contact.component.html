@@ -1,115 +1,102 @@
-<!-- Page Header -->
-<section class="pt-32 pb-16 relative">
-  <div class="absolute inset-0 bg-gradient-to-b from-primary-900/20 to-transparent"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">Let's <span class="text-gradient">Connect</span></h1>
-    <p class="text-gray-400 max-w-2xl mx-auto text-lg">Have a project in mind or need expert tech consultation? We're here to help you innovate.</p>
+<section class="itl-page-hero">
+  <div class="itl-page-shell">
+    <p class="itl-eyebrow">
+      <lucide-icon [img]="SendIcon" class="h-4 w-4"></lucide-icon>
+      Contact Us
+    </p>
+    <h1 class="itl-page-title mt-4">Let us talk through your next software, cloud, AI, or training goal.</h1>
+    <p class="itl-page-lead">
+      Share what you are trying to improve. We will help identify the right next step, whether that is discovery, design, development, modernization, or team enablement.
+    </p>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section class="py-16 mb-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-      
-      <!-- Contact Info & Map -->
-      <div data-aos="fade-right">
-        <h2 class="text-3xl font-bold text-white mb-8">Get in Touch</h2>
-        
-        <div class="space-y-6 mb-10">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-primary-500/10 border border-primary-500/30 flex items-center justify-center shrink-0">
-              <lucide-icon [img]="MapPinIcon" class="w-6 h-6 text-primary-400"></lucide-icon>
-            </div>
-            <div>
-              <h4 class="text-white font-semibold mb-1">Headquarters</h4>
-              <p class="text-gray-400 text-sm">Seventh Bliss, Gota,<br>Ahmedabad - 382481</p>
-            </div>
-          </div>
-          
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-primary-500/10 border border-primary-500/30 flex items-center justify-center shrink-0">
-              <lucide-icon [img]="MailIcon" class="w-6 h-6 text-primary-400"></lucide-icon>
-            </div>
-            <div>
-              <h4 class="text-white font-semibold mb-1">Email Us</h4>
-              <p class="text-gray-400 text-sm">innovancetechlabs&#64;gmail.com</p>
-            </div>
-          </div>
-          
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-lg bg-primary-500/10 border border-primary-500/30 flex items-center justify-center shrink-0">
-              <lucide-icon [img]="PhoneIcon" class="w-6 h-6 text-primary-400"></lucide-icon>
-            </div>
-            <div>
-              <h4 class="text-white font-semibold mb-1">Call Us</h4>
-              <p class="text-gray-400 text-sm">+91 9725287818</p>
-            </div>
-          </div>
-        </div>
+<section class="itl-section itl-section-blueprint">
+  <div class="itl-page-shell itl-contact-grid">
+    <div data-aos="fade-right">
+      <p class="itl-section-kicker">Get In Touch</p>
+      <h2 class="itl-section-title">Clear conversations before complex commitments.</h2>
+      <p class="itl-section-text mt-5">
+        Send a few details and we will respond with a practical path forward. You can also call or email us directly.
+      </p>
 
-        <!-- Placeholder Map -->
-        <div class="w-full h-64 rounded-2xl glass border-white/10 overflow-hidden relative group">
-          <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-          <div class="absolute inset-0 flex items-center justify-center bg-dark-950/80">
-            <div class="text-center">
-              <lucide-icon [img]="MapPinIcon" class="w-10 h-10 text-primary-500 mx-auto mb-2 animate-bounce"></lucide-icon>
-              <p class="text-gray-400 text-sm font-medium tracking-widest uppercase">Interactive Map Placeholder</p>
+      <div class="mt-8 grid gap-4">
+        <article class="itl-contact-card">
+          <div class="flex gap-4">
+            <div class="itl-icon-box">
+              <lucide-icon [img]="MapPinIcon" class="h-5 w-5"></lucide-icon>
+            </div>
+            <div>
+              <h3>Office</h3>
+              <p class="mt-2">Seventh Bliss, Gota, Ahmedabad - 382481</p>
             </div>
           </div>
-        </div>
+        </article>
+        <article class="itl-contact-card">
+          <div class="flex gap-4">
+            <div class="itl-icon-box">
+              <lucide-icon [img]="MailIcon" class="h-5 w-5"></lucide-icon>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p class="mt-2">innovancetechlabs&#64;gmail.com</p>
+            </div>
+          </div>
+        </article>
+        <article class="itl-contact-card">
+          <div class="flex gap-4">
+            <div class="itl-icon-box">
+              <lucide-icon [img]="PhoneIcon" class="h-5 w-5"></lucide-icon>
+            </div>
+            <div>
+              <h3>Phone</h3>
+              <p class="mt-2">+91 9725287818</p>
+            </div>
+          </div>
+        </article>
       </div>
-
-      <!-- Contact Form -->
-      <div data-aos="fade-left" class="relative">
-        <!-- Glow Behind Form -->
-        <div class="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-blue-500/20 blur-3xl -z-10 rounded-3xl"></div>
-        
-        <div class="glass-card !p-8 md:!p-10 border-primary-500/30 relative z-10 h-full">
-          <h3 class="text-2xl font-bold text-white mb-6">Send us a Message</h3>
-          
-          <form class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First Name</label>
-                <input type="text" id="firstName" class="w-full bg-dark-900 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all" placeholder="John">
-              </div>
-              <div>
-                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
-                <input type="text" id="lastName" class="w-full bg-dark-900 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all" placeholder="Doe">
-              </div>
-            </div>
-            
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-              <input type="email" id="email" class="w-full bg-dark-900 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all" placeholder="john@example.com">
-            </div>
-            
-            <div>
-              <label for="service" class="block text-sm font-medium text-gray-300 mb-2">Interested Service</label>
-              <select id="service" class="w-full bg-dark-900 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all appearance-none">
-                <option value="" disabled selected>Select a service...</option>
-                <option value="web">Web Development</option>
-                <option value="mobile">Mobile App Development</option>
-                <option value="ai">AI & Analytics</option>
-                <option value="cloud">Cloud Solutions</option>
-                <option value="training">Training & Certification</option>
-              </select>
-            </div>
-            
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
-              <textarea id="message" rows="4" class="w-full bg-dark-900 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all resize-none" placeholder="Tell us about your project..."></textarea>
-            </div>
-            
-            <button type="button" class="btn-primary w-full flex justify-center items-center gap-2 group">
-              Send Message
-              <lucide-icon [img]="SendIcon" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></lucide-icon>
-            </button>
-          </form>
-        </div>
-      </div>
-
     </div>
+
+    <form class="itl-form" data-aos="fade-left">
+      <div class="itl-form-grid sm:grid-cols-2">
+        <div>
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" placeholder="Your first name" />
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" placeholder="Your last name" />
+        </div>
+      </div>
+
+      <div class="itl-form-grid mt-4">
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@company.com" />
+        </div>
+
+        <div>
+          <label for="service">Interested Service</label>
+          <select id="service">
+            <option value="" disabled selected>Select a service</option>
+            <option value="software">Software Product Engineering</option>
+            <option value="cloud">Cloud Application Development</option>
+            <option value="ai">AI & Automation Services</option>
+            <option value="analytics">Dashboards & Analytics</option>
+            <option value="training">Training & Enablement</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message">Project Details</label>
+          <textarea id="message" class="itl-textarea" placeholder="Tell us about the product, workflow, or training need."></textarea>
+        </div>
+      </div>
+
+      <button type="button" class="itl-button itl-button-primary mt-5 w-full">
+        Send Message
+        <lucide-icon [img]="SendIcon" class="h-5 w-5"></lucide-icon>
+      </button>
+    </form>
   </div>
 </section>

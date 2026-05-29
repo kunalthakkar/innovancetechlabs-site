@@ -31,11 +31,19 @@ export class FooterComponent {
   ];
 
   services = [
-    'Custom Software Development',
-    'Web & Mobile Development',
-    'Cloud Solutions',
+    'Software Product Engineering',
     'AI & Automation',
-    'Dashboard & Analytics',
-    'Testing & QA'
+    'Cloud Application Development',
+    'Dashboards & Analytics',
+    'Quality Engineering',
+    'Training & Enablement'
+  ];
+
+  industries = [
+    'Healthcare',
+    'Finance',
+    'Retail',
+    'Education',
+    'Professional Services'
   ];
 }

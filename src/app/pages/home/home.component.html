@@ -1,220 +1,146 @@
-<!-- 1. Stunning Hero Section with CTA -->
-<section class="itl-hero relative isolate overflow-hidden">
-  <div class="itl-hero-media" aria-hidden="true"></div>
-  <div class="itl-hero-grid" aria-hidden="true"></div>
-  <div class="itl-hero-veil" aria-hidden="true"></div>
-
-  <div class="itl-holo-stage" aria-hidden="true">
-    <div class="itl-holo-core">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="itl-float-panel itl-float-panel-a">
-      <div class="flex items-center justify-between gap-4">
-        <span class="text-xs text-cyan-200/80">AI Delivery Pulse</span>
-        <span class="text-emerald-300 text-xs">LIVE</span>
-      </div>
-      <div class="mt-4 h-2 overflow-hidden rounded bg-white/10">
-        <div class="h-full w-[78%] bg-gradient-to-r from-cyan-300 via-emerald-300 to-amber-200"></div>
-      </div>
-      <div class="mt-3 grid grid-cols-3 gap-2 text-xs text-white/70">
-        <span>Plan</span>
-        <span>Build</span>
-        <span>Scale</span>
-      </div>
-    </div>
-    <div class="itl-float-panel itl-float-panel-b">
-      <div class="flex items-center gap-2 text-cyan-100">
-        <lucide-icon [img]="WorkflowIcon" class="h-4 w-4"></lucide-icon>
-        <span class="text-xs">Cloud Workflow</span>
-      </div>
-      <div class="mt-3 flex items-end gap-1.5">
-        <span class="h-6 w-2 rounded-sm bg-cyan-300/70"></span>
-        <span class="h-10 w-2 rounded-sm bg-emerald-300/80"></span>
-        <span class="h-8 w-2 rounded-sm bg-sky-300/70"></span>
-        <span class="h-12 w-2 rounded-sm bg-amber-200/80"></span>
-        <span class="h-7 w-2 rounded-sm bg-fuchsia-300/60"></span>
-      </div>
-    </div>
-  </div>
-
-  <div class="relative z-10 mx-auto flex min-h-[calc(100svh-10rem)] max-w-7xl items-center px-4 py-14 sm:px-6 lg:px-8">
-    <div class="itl-hero-copy max-w-5xl">
-      <div class="itl-eyebrow mb-6">
-        <lucide-icon [img]="SparklesIcon" class="h-4 w-4"></lucide-icon>
-        Where Innovation Meets Advancement
-      </div>
-
-      <h1 class="max-w-5xl font-space text-5xl font-bold leading-[1.02] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
-        Innovance TechLabs builds intelligent software for the next era.
-      </h1>
-
-      <p class="mt-7 max-w-3xl text-lg leading-8 text-slate-200/85 sm:text-xl">
-        We help ambitious companies design, engineer, automate, and scale modern digital products with cloud, AI, analytics, web, mobile, and enterprise software expertise.
-      </p>
-
-      <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-        <a routerLink="/contact" class="itl-button itl-button-primary">
-          Book a Consultation
-          <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>
-        </a>
-        <a routerLink="/services" class="itl-button itl-button-secondary">
-          Explore Services
-          <lucide-icon [img]="SparklesIcon" class="h-5 w-5"></lucide-icon>
-        </a>
-      </div>
-
-      <div class="mt-12 grid max-w-4xl grid-cols-1 gap-3 sm:grid-cols-3">
-        <div *ngFor="let metric of heroMetrics" class="itl-metric">
-          <strong>{{ metric.value }}</strong>
-          <span>{{ metric.label }}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 2. About Company -->
-<section id="about-company" class="itl-section itl-section-bright relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
-      <div data-aos="fade-right">
-        <p class="itl-section-kicker">About InnovanceTechLabs</p>
-        <h2 class="itl-section-title mt-4">A technology partner for companies that want momentum, not noise.</h2>
-        <p class="mt-6 text-lg leading-8 text-slate-700">
-          InnovanceTechLabs blends product thinking, enterprise engineering, and future-ready technologies to create digital systems that are beautiful, secure, scalable, and practical for real teams.
+<section class="itl-hero">
+  <div class="itl-shell">
+    <div class="itl-hero-grid">
+      <div data-aos="fade-up">
+        <p class="itl-eyebrow">
+          <lucide-icon [img]="SparklesIcon" class="h-4 w-4"></lucide-icon>
+          AI, software and cloud engineering
         </p>
-        <div class="mt-8 grid gap-4 sm:grid-cols-2">
-          <div class="itl-proof">
-            <lucide-icon [img]="RocketIcon" class="h-6 w-6"></lucide-icon>
-            <span>Fast discovery-to-delivery execution</span>
-          </div>
-          <div class="itl-proof">
-            <lucide-icon [img]="ShieldCheckIcon" class="h-6 w-6"></lucide-icon>
-            <span>Secure architecture from day one</span>
-          </div>
-          <div class="itl-proof">
-            <lucide-icon [img]="BotIcon" class="h-6 w-6"></lucide-icon>
-            <span>AI and automation built for usefulness</span>
-          </div>
-          <div class="itl-proof">
-            <lucide-icon [img]="GaugeIcon" class="h-6 w-6"></lucide-icon>
-            <span>Performance, quality, and long-term scale</span>
-          </div>
+        <h1>Future-ready software for teams ready to move faster.</h1>
+        <p class="itl-hero-lead">
+          Innovance TechLabs helps growing businesses design, build, secure, and scale digital products across AI automation, custom software, cloud platforms, analytics, QA, and team enablement.
+        </p>
+        <div class="itl-hero-actions">
+          <a routerLink="/contact" class="itl-button itl-button-primary">
+            Start a Conversation
+            <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>
+          </a>
+          <a routerLink="/services" class="itl-button itl-button-secondary">
+            View Services
+            <lucide-icon [img]="LayersIcon" class="h-5 w-5"></lucide-icon>
+          </a>
         </div>
       </div>
 
-      <div class="itl-media-frame" data-aos="fade-left">
-        <img src="/images/company-culture.png" alt="InnovanceTechLabs team collaborating around AI dashboards" loading="lazy">
+      <div class="itl-hero-visual" data-aos="fade-left">
+        <div class="itl-hero-frame">
+          <img src="/images/hero.png" alt="Digital product engineering dashboard" />
+        </div>
+        <div class="itl-hero-card">
+          <strong>Delivery confidence, from idea to production.</strong>
+          <span>Strategy, design, engineering, cloud, QA, and handover aligned in one practical roadmap.</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 3. Services Overview -->
-<section id="services-overview" class="itl-section relative overflow-hidden bg-[#050816]">
-  <div class="itl-circuit-bg" aria-hidden="true"></div>
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-      <p class="itl-section-kicker itl-kicker-dark">Services Overview</p>
-      <h2 class="itl-section-title itl-title-dark mt-4">Full-stack capability for modern software companies.</h2>
-      <p class="mt-5 text-lg leading-8 text-slate-300">
-        From strategy and design to development, deployment, automation, analytics, QA, and training, every service is built to compound into a stronger digital foundation.
+<section class="itl-clientele" aria-label="Clientele">
+  <div class="itl-shell itl-clientele-row">
+    <p>Built for</p>
+    <div class="itl-clientele-list">
+      <span *ngFor="let segment of clientele">{{ segment }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="itl-section">
+  <div class="itl-shell">
+    <div class="itl-section-head">
+      <div>
+        <p class="itl-section-kicker">Our Story in Numbers</p>
+        <h2 class="itl-section-title">Practical engineering depth for ambitious teams.</h2>
+      </div>
+      <p class="itl-section-text">
+        We keep delivery grounded in business outcomes, technical discipline, and clear communication so each engagement creates useful momentum.
       </p>
     </div>
 
-    <div class="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-      <article *ngFor="let service of services; let i = index" class="itl-service-card group" data-aos="fade-up" [attr.data-aos-delay]="i * 70">
-        <div class="flex items-start justify-between gap-5">
-          <div class="itl-icon-box">
-            <lucide-icon [img]="service.icon" class="h-6 w-6"></lucide-icon>
-          </div>
-          <span class="itl-service-tag">{{ service.tag }}</span>
+    <div class="itl-stats-grid">
+      <article *ngFor="let stat of storyStats" class="itl-stat-card" data-aos="fade-up">
+        <strong>{{ stat.value }}</strong>
+        <span>{{ stat.label }}</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="itl-section itl-section-muted">
+  <div class="itl-shell">
+    <div class="itl-section-head">
+      <div>
+        <p class="itl-section-kicker">Our Service Portfolio</p>
+        <h2 class="itl-section-title">Technology services that connect strategy with delivery.</h2>
+      </div>
+      <a routerLink="/services" class="itl-inline-link">
+        Explore all services
+        <lucide-icon [img]="ArrowRightIcon" class="h-4 w-4"></lucide-icon>
+      </a>
+    </div>
+
+    <div class="itl-card-grid">
+      <article *ngFor="let service of servicePortfolio; let i = index" class="itl-service-card" data-aos="fade-up" [attr.data-aos-delay]="i * 70">
+        <div class="itl-icon-box">
+          <lucide-icon [img]="service.icon" class="h-6 w-6"></lucide-icon>
         </div>
-        <h3 class="mt-7 text-xl font-semibold text-white">{{ service.title }}</h3>
-        <p class="mt-4 text-sm leading-6 text-slate-400">{{ service.desc }}</p>
-        <a routerLink="/services" class="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200">
+        <h3 class="mt-6">{{ service.title }}</h3>
+        <p class="mt-3">{{ service.desc }}</p>
+        <a routerLink="/services" class="itl-card-link">
           Learn more
-          <lucide-icon [img]="ArrowRightIcon" class="h-4 w-4 transition-transform group-hover:translate-x-1"></lucide-icon>
+          <lucide-icon [img]="ArrowRightIcon" class="h-4 w-4"></lucide-icon>
         </a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 4. Why Choose Us -->
-<section id="why-choose-us" class="itl-section relative overflow-hidden bg-[#f7fafc]">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
-      <div data-aos="fade-right">
-        <p class="itl-section-kicker">Why Choose Us</p>
-        <h2 class="itl-section-title mt-4">Premium engineering discipline with the flexibility of a focused partner.</h2>
-        <p class="mt-6 text-lg leading-8 text-slate-700">
-          You get senior-level thinking, clean communication, and a delivery approach that keeps the product, users, and business impact in view.
-        </p>
+<section class="itl-section itl-section-navy">
+  <div class="itl-shell itl-industries-layout">
+    <div data-aos="fade-right">
+      <p class="itl-section-kicker itl-kicker-light">Industries</p>
+      <h2 class="itl-section-title itl-title-light">Domain-aware solutions for teams with real operational pressure.</h2>
+      <p class="itl-section-text itl-text-light mt-5">
+        We do not bring one-size-fits-all technology. We shape platforms around workflows, compliance expectations, reporting needs, and user behavior.
+      </p>
+      <div class="itl-section-actions">
+        <a routerLink="/contact" class="itl-button itl-button-primary">Discuss your industry</a>
       </div>
+    </div>
 
-      <div class="grid gap-4 sm:grid-cols-2">
-        <article *ngFor="let item of differentiators; let i = index" class="itl-choice-card" data-aos="fade-up" [attr.data-aos-delay]="i * 90">
-          <div class="flex items-center justify-between">
-            <lucide-icon [img]="item.icon" class="h-7 w-7 text-cyan-600"></lucide-icon>
-            <span>{{ item.stat }}</span>
-          </div>
-          <h3 class="mt-6 text-lg font-semibold text-slate-950">{{ item.title }}</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">{{ item.desc }}</p>
-        </article>
-      </div>
+    <div class="itl-industries-grid">
+      <article *ngFor="let industry of industries; let i = index" class="itl-dark-card" data-aos="fade-up" [attr.data-aos-delay]="i * 80">
+        <lucide-icon [img]="industry.icon" class="h-7 w-7 text-sky-300"></lucide-icon>
+        <h3 class="mt-5">{{ industry.title }}</h3>
+        <p class="mt-3">{{ industry.desc }}</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- 5. Technology Stack -->
-<section id="technology-stack" class="itl-section itl-tech-section relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-      <div data-aos="fade-right">
-        <p class="itl-section-kicker itl-kicker-dark">Technology Stack</p>
-        <h2 class="itl-section-title itl-title-dark mt-4">Modern tools, proven patterns, scalable foundations.</h2>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-2">
-        <div *ngFor="let group of techStackGroups; let i = index" class="itl-tech-card" data-aos="fade-up" [attr.data-aos-delay]="i * 80">
-          <h3>{{ group.category }}</h3>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span *ngFor="let tool of group.tools">{{ tool }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. Client Success / Portfolio -->
-<section id="portfolio" class="itl-section relative overflow-hidden bg-white">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end" data-aos="fade-up">
-      <div class="max-w-3xl">
-        <p class="itl-section-kicker">Client Success / Portfolio</p>
-        <h2 class="itl-section-title mt-4">Digital products that look impressive and work under pressure.</h2>
+<section class="itl-section">
+  <div class="itl-shell">
+    <div class="itl-section-head">
+      <div>
+        <p class="itl-section-kicker">Empowering Clients to Succeed</p>
+        <h2 class="itl-section-title">Original project directions, built around measurable business value.</h2>
       </div>
       <a routerLink="/projects" class="itl-inline-link">
-        View Projects
+        View selected work
         <lucide-icon [img]="ArrowRightIcon" class="h-4 w-4"></lucide-icon>
       </a>
     </div>
 
-    <div class="mt-12 grid gap-5 lg:grid-cols-3">
-      <article *ngFor="let item of portfolio; let i = index" class="itl-portfolio-card group" data-aos="fade-up" [attr.data-aos-delay]="i * 100">
-        <div class="itl-portfolio-image">
-          <img [src]="item.image" [alt]="item.title" loading="lazy">
+    <div class="itl-card-grid">
+      <article *ngFor="let project of caseStudies; let i = index" class="itl-case-card" data-aos="fade-up" [attr.data-aos-delay]="i * 100">
+        <div class="itl-case-image">
+          <img [src]="project.image" [alt]="project.title" loading="lazy" />
         </div>
-        <div class="p-5">
-          <p class="text-sm font-semibold text-cyan-700">{{ item.eyebrow }}</p>
-          <h3 class="mt-3 text-xl font-semibold text-slate-950">{{ item.title }}</h3>
-          <p class="mt-3 text-sm leading-6 text-slate-600">{{ item.desc }}</p>
-          <div class="mt-5 grid gap-2">
-            <span *ngFor="let result of item.results" class="itl-result-pill">
+        <div class="itl-case-body">
+          <p class="itl-section-kicker">{{ project.category }}</p>
+          <h3 class="mt-3">{{ project.title }}</h3>
+          <p class="mt-3">{{ project.desc }}</p>
+          <div class="itl-result-list">
+            <span *ngFor="let result of project.results" class="itl-result-pill">
               <lucide-icon [img]="CheckCircleIcon" class="h-4 w-4"></lucide-icon>
               {{ result }}
             </span>
@@ -225,94 +151,95 @@
   </div>
 </section>
 
-<!-- 7. Process Workflow -->
-<section id="process-workflow" class="itl-section relative overflow-hidden bg-[#071018]">
-  <div class="itl-gridline-bg" aria-hidden="true"></div>
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-      <p class="itl-section-kicker itl-kicker-dark">Process Workflow</p>
-      <h2 class="itl-section-title itl-title-dark mt-4">A transparent path from first idea to scalable product.</h2>
+<section class="itl-section itl-section-muted">
+  <div class="itl-shell">
+    <div class="itl-section-head-centered">
+      <p class="itl-section-kicker">Explore Industry Thinking</p>
+      <h2 class="itl-section-title">Guidance for teams planning smarter software investments.</h2>
+      <p class="itl-section-text mx-auto mt-5">
+        Thought-leadership style resources, written for decision makers who need clarity before they commit budget, people, and time.
+      </p>
     </div>
 
-    <div class="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      <article *ngFor="let step of processSteps; let i = index" class="itl-process-step" data-aos="fade-up" [attr.data-aos-delay]="i * 80">
-        <span>{{ step.step }}</span>
-        <h3>{{ step.title }}</h3>
-        <p>{{ step.desc }}</p>
+    <div class="itl-card-grid">
+      <article *ngFor="let insight of insights; let i = index" class="itl-insight-card" data-aos="fade-up" [attr.data-aos-delay]="i * 90">
+        <p class="itl-section-kicker">{{ insight.type }}</p>
+        <h3 class="mt-4">{{ insight.title }}</h3>
+        <p class="mt-3">{{ insight.desc }}</p>
+        <a routerLink="/contact" class="itl-card-link">
+          Talk through this
+          <lucide-icon [img]="ArrowRightIcon" class="h-4 w-4"></lucide-icon>
+        </a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 8. Testimonials -->
-<section id="testimonials" class="itl-section relative overflow-hidden bg-[#f8fbff]">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-      <p class="itl-section-kicker">Testimonials</p>
-      <h2 class="itl-section-title mt-4">Trusted by teams that care about quality and clarity.</h2>
+<section class="itl-section">
+  <div class="itl-shell itl-split">
+    <div data-aos="fade-right">
+      <p class="itl-section-kicker">Built for Trust</p>
+      <h2 class="itl-section-title">The standards that make digital delivery easier to approve.</h2>
+      <p class="itl-section-text mt-5">
+        Instead of claiming borrowed awards, we show up with the signals clients can inspect: documentation, QA, security habits, launch planning, and post-release ownership.
+      </p>
     </div>
 
-    <div class="mt-12 grid gap-5 md:grid-cols-3">
-      <article *ngFor="let testimonial of testimonials; let i = index" class="itl-testimonial-card" data-aos="fade-up" [attr.data-aos-delay]="i * 100">
-        <lucide-icon [img]="MessageCircleIcon" class="h-7 w-7 text-cyan-600"></lucide-icon>
-        <p class="mt-6 text-base leading-7 text-slate-700">"{{ testimonial.quote }}"</p>
-        <div class="mt-7 border-t border-slate-200 pt-5">
-          <h3 class="font-semibold text-slate-950">{{ testimonial.author }}</h3>
-          <p class="mt-1 text-sm text-slate-500">{{ testimonial.role }}</p>
-        </div>
+    <div class="itl-card-grid">
+      <article *ngFor="let signal of trustSignals; let i = index" class="itl-signal-card" data-aos="fade-up" [attr.data-aos-delay]="i * 80">
+        <lucide-icon [img]="signal.icon" class="h-7 w-7 text-sky-600"></lucide-icon>
+        <h3 class="mt-4">{{ signal.title }}</h3>
+        <p class="mt-3">{{ signal.desc }}</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 9. Contact / Consultation Section -->
-<section id="consultation" class="itl-section itl-consultation relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-      <div data-aos="fade-right">
-        <p class="itl-section-kicker itl-kicker-dark">Contact / Consultation</p>
-        <h2 class="itl-section-title itl-title-dark mt-4">Ready to turn your next idea into a future-ready platform?</h2>
-        <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-          Share your goals with InnovanceTechLabs and we will help you identify the fastest, cleanest, and most scalable path forward.
-        </p>
-        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a routerLink="/contact" class="itl-button itl-button-primary">
-            Start Your Project
-            <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>
-          </a>
-          <a href="mailto:innovancetechlabs@gmail.com" class="itl-button itl-button-secondary">
-            Email Us
-            <lucide-icon [img]="MailIcon" class="h-5 w-5"></lucide-icon>
-          </a>
+<section class="itl-section itl-section-blueprint">
+  <div class="itl-shell itl-contact-grid">
+    <div data-aos="fade-right">
+      <p class="itl-section-kicker">Contact Us</p>
+      <h2 class="itl-section-title">Ready to define the right technology path?</h2>
+      <p class="itl-section-text mt-5">
+        Share a product idea, process issue, data challenge, cloud concern, or training goal. We will help shape it into practical next steps.
+      </p>
+      <div class="mt-8 grid gap-4">
+        <div class="itl-contact-card">
+          <h3>Direct line</h3>
+          <p class="mt-2">+91 9725287818</p>
         </div>
-      </div>
-
-      <div class="itl-contact-panel" data-aos="fade-left">
-        <div class="flex items-center gap-3">
-          <div class="itl-icon-box">
-            <lucide-icon [img]="PhoneIcon" class="h-5 w-5"></lucide-icon>
-          </div>
-          <div>
-            <p class="text-sm text-slate-400">Direct line</p>
-            <p class="font-semibold text-white">+91 9725287818</p>
-          </div>
-        </div>
-        <div class="mt-6 flex items-center gap-3">
-          <div class="itl-icon-box">
-            <lucide-icon [img]="MapPinIcon" class="h-5 w-5"></lucide-icon>
-          </div>
-          <div>
-            <p class="text-sm text-slate-400">Studio</p>
-            <p class="font-semibold text-white">Ahmedabad, India</p>
-          </div>
-        </div>
-        <div class="mt-8 space-y-3">
-          <div *ngFor="let highlight of consultationHighlights" class="itl-consult-item">
-            <lucide-icon [img]="CheckCircleIcon" class="h-4 w-4"></lucide-icon>
-            <span>{{ highlight }}</span>
-          </div>
+        <div class="itl-contact-card">
+          <h3>Email</h3>
+          <p class="mt-2">innovancetechlabs&#64;gmail.com</p>
         </div>
       </div>
     </div>
+
+    <form class="itl-form" data-aos="fade-left">
+      <div class="itl-form-grid sm:grid-cols-2">
+        <div>
+          <label for="homeFirstName">First Name</label>
+          <input id="homeFirstName" type="text" placeholder="Your first name" />
+        </div>
+        <div>
+          <label for="homeLastName">Last Name</label>
+          <input id="homeLastName" type="text" placeholder="Your last name" />
+        </div>
+      </div>
+      <div class="itl-form-grid mt-4">
+        <div>
+          <label for="homeEmail">Email Address</label>
+          <input id="homeEmail" type="email" placeholder="you@company.com" />
+        </div>
+        <div>
+          <label for="homeMessage">How can we help?</label>
+          <textarea id="homeMessage" class="itl-textarea" placeholder="Tell us about the product, workflow, or training need."></textarea>
+        </div>
+      </div>
+      <button type="button" class="itl-button itl-button-primary mt-5 w-full">
+        Contact Us
+        <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>
+      </button>
+    </form>
   </div>
 </section>

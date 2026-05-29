@@ -1,14 +1,12 @@
-<footer class="itl-footer relative overflow-hidden">
-  <div class="itl-footer-line" aria-hidden="true"></div>
-
-  <div class="relative mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-    <div class="grid gap-10 lg:grid-cols-[1.15fr_0.75fr_0.85fr_1fr]">
+<footer class="itl-footer">
+  <div class="itl-shell">
+    <div class="itl-footer-top">
       <div>
         <a routerLink="/" aria-label="InnovanceTechLabs home">
-          <app-logo [size]="48" textScale="sm" [showSlogan]="true"></app-logo>
+          <app-logo [size]="46" textScale="sm" [showSlogan]="true"></app-logo>
         </a>
-        <p class="mt-6 max-w-sm text-sm leading-6 text-slate-400">
-          InnovanceTechLabs designs and engineers future-ready digital products, cloud platforms, AI automation, dashboards, and IT training experiences.
+        <p class="mt-6 text-sm leading-6">
+          Innovance TechLabs helps teams build future-ready products across software engineering, AI automation, cloud, analytics, QA, and training.
         </p>
         <div class="mt-6 flex gap-3">
           <a href="#" class="itl-social-link" aria-label="Twitter">
@@ -42,29 +40,38 @@
       </div>
 
       <div>
+        <h3 class="itl-footer-heading">Industries</h3>
+        <ul class="mt-5 grid gap-3 text-sm">
+          <li *ngFor="let industry of industries">
+            <a routerLink="/services" class="itl-footer-link">{{ industry }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
         <h3 class="itl-footer-heading">Contact</h3>
         <ul class="mt-5 grid gap-4 text-sm">
           <li class="flex gap-3">
-            <lucide-icon [img]="MapPinIcon" class="mt-0.5 h-5 w-5 shrink-0 text-cyan-300"></lucide-icon>
-            <span class="text-slate-400">Seventh Bliss, Gota, Ahmedabad - 382481</span>
+            <lucide-icon [img]="MapPinIcon" class="mt-0.5 h-5 w-5 shrink-0 text-sky-300"></lucide-icon>
+            <span class="text-white/70">Seventh Bliss, Gota, Ahmedabad - 382481</span>
           </li>
           <li class="flex gap-3">
-            <lucide-icon [img]="PhoneIcon" class="h-5 w-5 shrink-0 text-cyan-300"></lucide-icon>
-            <span class="text-slate-400">+91 9725287818</span>
+            <lucide-icon [img]="PhoneIcon" class="h-5 w-5 shrink-0 text-sky-300"></lucide-icon>
+            <span class="text-white/70">+91 9725287818</span>
           </li>
           <li class="flex gap-3">
-            <lucide-icon [img]="MailIcon" class="h-5 w-5 shrink-0 text-cyan-300"></lucide-icon>
-            <span class="text-slate-400">innovancetechlabs&#64;gmail.com</span>
+            <lucide-icon [img]="MailIcon" class="h-5 w-5 shrink-0 text-sky-300"></lucide-icon>
+            <span class="text-white/70">innovancetechlabs&#64;gmail.com</span>
           </li>
         </ul>
       </div>
     </div>
 
-    <div class="mt-12 flex flex-col gap-4 border-t border-white/10 pt-7 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-      <p>&copy; {{ currentYear }} InnovanceTechLabs. All rights reserved.</p>
-      <div class="flex gap-5">
-        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+    <div class="itl-footer-bottom">
+      <p>&copy; {{ currentYear }} Innovance TechLabs. All rights reserved.</p>
+      <div class="flex flex-wrap gap-5">
+        <a href="#" class="itl-footer-link">Privacy Policy</a>
+        <a href="#" class="itl-footer-link">Terms of Service</a>
       </div>
     </div>
   </div>

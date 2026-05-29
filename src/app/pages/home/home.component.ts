@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import {
   ArrowRight,
   Bot,
@@ -9,18 +9,12 @@ import {
   CheckCircle,
   CloudCog,
   Code,
-  Cpu,
   Database,
   Gauge,
   Globe,
   Handshake,
   Layers,
-  Mail,
-  MapPin,
-  MessageCircle,
   MonitorSmartphone,
-  Phone,
-  Rocket,
   ShieldCheck,
   Sparkles,
   Users,
@@ -38,203 +32,147 @@ import { LucideAngularModule } from 'lucide-angular';
 })
 export class HomeComponent {
   readonly ArrowRightIcon = ArrowRight;
-  readonly BotIcon = Bot;
-  readonly BrainCircuitIcon = BrainCircuit;
   readonly CheckCircleIcon = CheckCircle;
-  readonly GaugeIcon = Gauge;
-  readonly GlobeIcon = Globe;
-  readonly HandshakeIcon = Handshake;
-  readonly MailIcon = Mail;
-  readonly MapPinIcon = MapPin;
-  readonly MessageCircleIcon = MessageCircle;
-  readonly PhoneIcon = Phone;
-  readonly RocketIcon = Rocket;
-  readonly ShieldCheckIcon = ShieldCheck;
+  readonly LayersIcon = Layers;
   readonly SparklesIcon = Sparkles;
-  readonly WorkflowIcon = Workflow;
-  readonly ZapIcon = Zap;
 
-  heroMetrics = [
-    { value: '50+', label: 'Digital products shipped' },
-    { value: '24/7', label: 'Cloud and support mindset' },
-    { value: '8', label: 'Core engineering capabilities' }
+  clientele = ['Startups', 'SMBs', 'Enterprise Teams', 'Founders', 'Operations Leaders', 'Training Cohorts'];
+
+  storyStats = [
+    { value: '50+', label: 'Products, dashboards, platforms, and digital experiences delivered' },
+    { value: '8', label: 'Connected service lines across software, cloud, AI, QA, and training' },
+    { value: '24/7', label: 'Launch-support mindset for production systems and growing teams' },
+    { value: '1', label: 'Integrated partner for discovery, build, release, and enablement' }
   ];
 
-  services = [
+  servicePortfolio = [
     {
-      title: 'Custom Software Development',
-      desc: 'Enterprise platforms, workflow systems, integrations, and secure architecture built around your business model.',
-      icon: Code,
-      tag: 'Architecture'
+      title: 'Software Product Engineering',
+      desc: 'Custom platforms, SaaS products, portals, integrations, and workflow systems built around real business operations.',
+      icon: Code
     },
     {
-      title: 'Web Development',
-      desc: 'High-performance websites, portals, SaaS frontends, and Angular experiences designed for conversion and scale.',
-      icon: Globe,
-      tag: 'Frontend'
+      title: 'AI & Automation Services',
+      desc: 'Useful AI assistants, document intelligence, smart workflows, and automation programs that reduce repetitive work.',
+      icon: BrainCircuit
     },
     {
-      title: 'Mobile App Development',
-      desc: 'Modern mobile apps with smooth journeys, reliable APIs, and release-ready product engineering.',
-      icon: MonitorSmartphone,
-      tag: 'iOS + Android'
+      title: 'Cloud Application Development',
+      desc: 'Cloud-native apps, migration planning, infrastructure automation, monitoring, and resilient deployments.',
+      icon: CloudCog
     },
     {
-      title: 'Cloud Solutions',
-      desc: 'Cloud migration, DevOps, infrastructure automation, monitoring, and resilient deployment pipelines.',
-      icon: CloudCog,
-      tag: 'AWS + Azure'
+      title: 'Data, Dashboards & Analytics',
+      desc: 'Executive dashboards, operational reporting, Power BI, and data products that turn information into decisions.',
+      icon: Database
     },
     {
-      title: 'AI & Automation',
-      desc: 'AI-assisted workflows, predictive systems, intelligent assistants, and automation that reduces operational drag.',
-      icon: BrainCircuit,
-      tag: 'Intelligence'
+      title: 'Quality Engineering',
+      desc: 'Manual and automated QA, accessibility checks, performance testing, and release readiness for dependable launches.',
+      icon: ShieldCheck
     },
     {
-      title: 'Dashboard & Analytics',
-      desc: 'Executive dashboards, Power BI experiences, live metrics, and decision systems connected to trusted data.',
-      icon: Database,
-      tag: 'Insights'
-    },
-    {
-      title: 'Testing & QA',
-      desc: 'Manual and automated quality practices that harden performance, usability, accessibility, and security.',
-      icon: ShieldCheck,
-      tag: 'Quality'
-    },
-    {
-      title: 'Corporate IT Training',
-      desc: 'Practical upskilling programs for engineering teams across cloud, web, data, QA, and AI practices.',
-      icon: Users,
-      tag: 'Enablement'
+      title: 'Team Training & Enablement',
+      desc: 'Practical training for web, cloud, QA, data, AI, and final-year project support with hands-on guidance.',
+      icon: Users
     }
   ];
 
-  differentiators = [
+  industries = [
     {
-      title: 'Strategy Before Code',
-      desc: 'We clarify outcomes, users, constraints, and success metrics before a single sprint begins.',
-      icon: Sparkles,
-      stat: '01'
+      title: 'Healthcare & Wellness',
+      desc: 'Patient-facing portals, reporting workflows, scheduling tools, and secure data experiences.',
+      icon: Building2
     },
     {
-      title: 'Product-Grade Engineering',
-      desc: 'Every interface, API, and workflow is designed to feel polished, reliable, and easy to evolve.',
-      icon: Cpu,
-      stat: '02'
+      title: 'Finance & Operations',
+      desc: 'Approval flows, dashboards, internal platforms, and automation for risk-aware business teams.',
+      icon: Gauge
     },
     {
-      title: 'Cloud-Native Delivery',
-      desc: 'Secure infrastructure, CI/CD, observability, and release discipline are baked into the delivery path.',
-      icon: CloudCog,
-      stat: '03'
+      title: 'Retail & Commerce',
+      desc: 'Customer journeys, inventory visibility, CRM touchpoints, and analytics for growing brands.',
+      icon: Globe
     },
     {
-      title: 'Long-Term Partnership',
-      desc: 'We stay close after launch with iteration, support, knowledge transfer, and measurable improvement.',
-      icon: Handshake,
-      stat: '04'
+      title: 'Education & Training',
+      desc: 'Learning portals, certification workflows, cohort dashboards, and guided project support.',
+      icon: MonitorSmartphone
     }
   ];
 
-  techStackGroups = [
+  caseStudies = [
     {
-      category: 'Frontend',
-      tools: ['Angular', 'React', 'TypeScript', 'Tailwind CSS', 'Web APIs']
-    },
-    {
-      category: 'Backend',
-      tools: ['.NET Core', 'Node.js', 'REST APIs', 'SQL Server', 'PostgreSQL']
-    },
-    {
-      category: 'Cloud + DevOps',
-      tools: ['Azure', 'AWS', 'Docker', 'Kubernetes', 'CI/CD']
-    },
-    {
-      category: 'AI + Data',
-      tools: ['Python', 'Power BI', 'Automation', 'Analytics', 'ML Workflows']
-    }
-  ];
-
-  portfolio = [
-    {
-      title: 'AI Analytics Command Center',
-      eyebrow: 'Dashboard & Analytics',
-      desc: 'A real-time decision cockpit for leadership teams with predictive signals, anomaly alerts, and governed reporting.',
+      title: 'AI Operations Command Center',
+      category: 'Analytics + AI',
+      desc: 'A real-time decision cockpit with anomaly alerts, role-based dashboards, and predictive workflow signals.',
       image: '/images/project1.png',
-      results: ['94% insight accuracy', '40+ reporting hours saved']
+      results: ['Faster leadership reviews', 'Automated exception tracking']
     },
     {
-      title: 'Cloud Infrastructure Modernization',
-      eyebrow: 'Cloud Solutions',
-      desc: 'A resilient cloud migration program with automated deployments, observability, and cost-aware scaling.',
+      title: 'Cloud Modernization Roadmap',
+      category: 'Cloud + DevOps',
+      desc: 'A scalable cloud architecture program with CI/CD, observability, cost-aware release planning, and team handover.',
       image: '/images/project2.png',
-      results: ['10x scaling headroom', '40% infrastructure savings']
+      results: ['Cleaner release cycles', 'More predictable scaling']
     },
     {
       title: 'Enterprise Workflow Platform',
-      eyebrow: 'Custom Software',
-      desc: 'A secure operations platform connecting approvals, ERP data, field teams, and executive dashboards.',
+      category: 'Custom Software',
+      desc: 'A secure operations system connecting approvals, documents, field teams, and management reporting.',
       image: '/images/company-culture.png',
-      results: ['Unified operations', 'Faster release cycles']
+      results: ['Unified process visibility', 'Lower manual follow-up']
     }
   ];
 
-  processSteps = [
+  insights = [
     {
-      step: '01',
-      title: 'Discover',
-      desc: 'Understand the business goal, users, systems, risk, and opportunity.'
+      type: 'Guide',
+      title: 'How to plan an AI automation project without creating more operational noise',
+      desc: 'A practical readiness checklist for choosing the right workflows, data sources, and success metrics.'
     },
     {
-      step: '02',
-      title: 'Architect',
-      desc: 'Define the product blueprint, data model, integrations, and delivery roadmap.'
+      type: 'Playbook',
+      title: 'Cloud modernization decisions every growing product team should make early',
+      desc: 'Architecture, release, monitoring, and cost choices that keep platforms easier to scale.'
     },
     {
-      step: '03',
-      title: 'Prototype',
-      desc: 'Validate key flows with high-fidelity UX and fast technical proof points.'
-    },
-    {
-      step: '04',
-      title: 'Build',
-      desc: 'Ship in focused sprints with clean engineering, reviews, and demos.'
-    },
-    {
-      step: '05',
-      title: 'Assure',
-      desc: 'Test usability, security, performance, and release readiness before launch.'
-    },
-    {
-      step: '06',
-      title: 'Scale',
-      desc: 'Deploy, monitor, optimize, and keep improving the product after release.'
+      type: 'Framework',
+      title: 'What stakeholders need from dashboards before they trust the numbers',
+      desc: 'How to align reporting design with business questions, data quality, and action ownership.'
     }
   ];
 
-  testimonials = [
+  trustSignals = [
     {
-      quote: 'Innovance TechLabs helped us turn a scattered workflow into a clean, measurable platform. The team understood both the product and the engineering depth we needed.',
-      author: 'Priya Shah',
-      role: 'Operations Director, Growth Platform'
+      title: 'Security-aware architecture',
+      desc: 'Access, data flows, environments, and release paths are considered from the start.',
+      icon: ShieldCheck
     },
     {
-      quote: 'Their dashboard work made our leadership reviews dramatically faster. The experience feels premium, but the backend is where the real discipline shows.',
-      author: 'Daniel Mehta',
-      role: 'Head of Data, SaaS Company'
+      title: 'Transparent delivery',
+      desc: 'Demos, documentation, and decision logs keep stakeholders aligned throughout delivery.',
+      icon: Workflow
     },
     {
-      quote: 'We needed a partner who could move quickly without creating technical debt. Innovance delivered with clarity, ownership, and excellent communication.',
-      author: 'Aarav Patel',
-      role: 'Founder, Cloud Services Startup'
+      title: 'Quality gates',
+      desc: 'QA, performance, accessibility, and launch checks are built into the release path.',
+      icon: CheckCircle
+    },
+    {
+      title: 'Long-term ownership',
+      desc: 'Support, optimization, and training help your team keep improving after launch.',
+      icon: Handshake
+    },
+    {
+      title: 'Practical automation',
+      desc: 'AI and workflow automation are scoped around measurable business value.',
+      icon: Bot
+    },
+    {
+      title: 'Fast validation',
+      desc: 'Prototypes and technical proofs reduce risk before larger engineering commitments.',
+      icon: Zap
     }
-  ];
-
-  consultationHighlights = [
-    'Product and architecture review',
-    'Cloud, AI, and automation opportunities',
-    'Roadmap with practical next steps'
   ];
 }

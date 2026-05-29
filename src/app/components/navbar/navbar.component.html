@@ -1,6 +1,6 @@
 <nav class="itl-nav fixed left-0 top-0 z-50 w-full transition-all duration-300" [class.itl-nav-scrolled]="isScrolled">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="flex h-20 items-center justify-between">
+    <div class="flex h-20 items-center justify-between gap-5">
       <a routerLink="/" class="shrink-0" aria-label="InnovanceTechLabs home" (click)="closeMenu()">
         <app-logo [size]="42" textScale="sm"></app-logo>
       </a>
@@ -19,13 +19,9 @@
 
       <div class="hidden items-center gap-3 md:flex">
         <a routerLink="/contact" class="itl-nav-cta">
-          Contact
+          Get In Touch
           <lucide-icon [img]="ArrowRightIcon" class="h-4 w-4"></lucide-icon>
         </a>
-        <button (click)="toggleTheme()" aria-label="Toggle theme" class="itl-menu-button">
-          <lucide-icon *ngIf="!isLightTheme" [img]="SunIcon" class="h-4 w-4"></lucide-icon>
-          <lucide-icon *ngIf="isLightTheme" [img]="MoonIcon" class="h-4 w-4"></lucide-icon>
-        </button>
       </div>
 
       <button
@@ -37,10 +33,6 @@
       >
         <lucide-icon *ngIf="!isMenuOpen" [img]="MenuIcon" class="h-5 w-5"></lucide-icon>
         <lucide-icon *ngIf="isMenuOpen" [img]="XIcon" class="h-5 w-5"></lucide-icon>
-      </button>
-      <button (click)="toggleTheme()" aria-label="Toggle theme" class="itl-menu-button md:hidden ml-2">
-        <lucide-icon *ngIf="!isLightTheme" [img]="SunIcon" class="h-5 w-5"></lucide-icon>
-        <lucide-icon *ngIf="isLightTheme" [img]="MoonIcon" class="h-5 w-5"></lucide-icon>
       </button>
     </div>
   </div>
@@ -57,7 +49,7 @@
           {{ link.label }}
         </a>
         <a routerLink="/contact" (click)="closeMenu()" class="itl-mobile-link itl-mobile-cta">
-          Contact
+          Get In Touch
           <lucide-icon [img]="ArrowRightIcon" class="h-4 w-4"></lucide-icon>
         </a>
       </div>

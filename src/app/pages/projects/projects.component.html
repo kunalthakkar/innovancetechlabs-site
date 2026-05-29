@@ -1,59 +1,64 @@
-<!-- Page Header -->
-<section class="pt-32 pb-16 relative">
-  <div class="absolute inset-0 bg-gradient-to-b from-primary-900/20 to-transparent"></div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">Our <span class="text-gradient">Portfolio</span></h1>
-    <p class="text-gray-400 max-w-2xl mx-auto text-lg">A showcase of our most impactful and technically complex projects delivered to clients worldwide.</p>
+<section class="itl-page-hero">
+  <div class="itl-page-shell">
+    <p class="itl-eyebrow">
+      <lucide-icon [img]="BriefcaseIcon" class="h-4 w-4"></lucide-icon>
+      Selected Work
+    </p>
+    <h1 class="itl-page-title mt-4">Original project directions shaped around business outcomes.</h1>
+    <p class="itl-page-lead">
+      A showcase of representative Innovance TechLabs work patterns. These examples are original concepts based on our service capabilities, not copied from the reference site.
+    </p>
+    <div class="itl-hero-actions">
+      <a routerLink="/contact" class="itl-button itl-button-primary">
+        Discuss a Similar Build
+        <lucide-icon [img]="ArrowRightIcon" class="h-5 w-5"></lucide-icon>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- Projects Grid -->
-<section class="py-16 mb-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <div *ngFor="let project of projects; let i = index" class="glass rounded-2xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]" [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
-        
-        <!-- Project Image -->
-        <div class="relative h-48 md:h-60 overflow-hidden bg-dark-900 border-b border-white/10 flex items-center justify-center">
-          <!-- Fallback gradient if image fails -->
-          <div class="absolute inset-0 bg-gradient-to-br from-primary-900 to-dark-950"></div>
-          
-          <img [src]="project.image" [alt]="project.title" 
-               class="relative z-10 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100 mix-blend-lighten"
-               onerror="this.style.display='none'">
-               
-          <!-- Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-dark-950 to-transparent z-20"></div>
+<section class="itl-section itl-section-muted">
+  <div class="itl-page-shell">
+    <div class="itl-card-grid">
+      <article *ngFor="let project of projects; let i = index" class="itl-case-card" data-aos="fade-up" [attr.data-aos-delay]="i * 100">
+        <div class="itl-case-image">
+          <img [src]="project.image" [alt]="project.title" loading="lazy" />
         </div>
-
-        <!-- Project Details -->
-        <div class="p-6 relative z-30">
-          <h3 class="text-xl font-bold text-white mb-3">{{ project.title }}</h3>
-          <p class="text-gray-400 text-sm leading-relaxed mb-6 h-20 overflow-hidden">
-            {{ project.desc }}
-          </p>
-          
-          <!-- Tags -->
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span *ngFor="let tag of project.tags" class="text-xs font-medium px-2 py-1 bg-white/5 border border-white/10 rounded-md text-primary-300">
-              {{ tag }}
+        <div class="itl-case-body">
+          <p class="itl-section-kicker">{{ project.category }}</p>
+          <h3 class="mt-3">{{ project.title }}</h3>
+          <p class="mt-3">{{ project.desc }}</p>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span *ngFor="let tag of project.tags" class="itl-chip">{{ tag }}</span>
+          </div>
+          <div class="itl-result-list">
+            <span *ngFor="let result of project.results" class="itl-result-pill">
+              <lucide-icon [img]="CheckCircleIcon" class="h-4 w-4"></lucide-icon>
+              {{ result }}
             </span>
           </div>
-          
-          <!-- Actions -->
-          <div class="flex items-center gap-4 pt-4 border-t border-white/5">
-            <a [href]="project.demoLink" class="text-gray-300 hover:text-white flex items-center gap-2 text-sm transition-colors group/link">
-              <lucide-icon [img]="ExternalLinkIcon" class="w-4 h-4 text-primary-400 group-hover/link:text-primary-300"></lucide-icon> Live Demo
-            </a>
-            <a [href]="project.githubLink" class="text-gray-300 hover:text-white flex items-center gap-2 text-sm transition-colors group/link">
-              <lucide-icon [img]="GithubIcon" class="w-4 h-4 text-primary-400 group-hover/link:text-primary-300"></lucide-icon> Code
-            </a>
-          </div>
         </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-      </div>
+<section class="itl-section">
+  <div class="itl-page-shell itl-split">
+    <div data-aos="fade-right">
+      <p class="itl-section-kicker">How Projects Move</p>
+      <h2 class="itl-section-title">A repeatable path from concept to dependable launch.</h2>
+      <p class="itl-section-text mt-5">
+        Each engagement starts with clarity, then moves through prototype, engineering, QA, launch planning, and post-release optimization.
+      </p>
+    </div>
 
+    <div class="grid gap-4">
+      <article *ngFor="let step of projectSteps; let i = index" class="itl-light-card p-6" data-aos="fade-up" [attr.data-aos-delay]="i * 80">
+        <p class="itl-section-kicker">0{{ i + 1 }}</p>
+        <h3 class="mt-3">{{ step.title }}</h3>
+        <p class="mt-3">{{ step.desc }}</p>
+      </article>
     </div>
   </div>
 </section>
