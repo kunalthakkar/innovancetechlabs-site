@@ -156,7 +156,8 @@ body.light-theme {
 
 body.light-theme .navbar {
   background: rgba(255,255,255,0.98);
-  border-bottom-color: rgba(6,30,40,0.04);
+  border-bottom-color: rgba(15,23,42,0.08);
+  box-shadow: 0 14px 34px rgba(15,23,42,0.08);
 }
 
 /* Swap static logo image when light theme is active */
@@ -180,6 +181,22 @@ body.light-theme .logo-text .slogan {
   color: #A855F7; /* Accent Purple */
 }
 
+body.light-theme nav a {
+  color: #334155;
+}
+
+body.light-theme nav a:hover {
+  color: #061018;
+}
+
+body.light-theme nav a.active {
+  color: #0EA5E9;
+}
+
+body.light-theme nav a.active::after {
+  background: linear-gradient(90deg, #00AEEF, #1E6BFF, #A855F7);
+}
+
 /* Static pages theme-toggle button */
 .theme-toggle-btn {
   display: inline-flex;
@@ -198,7 +215,7 @@ body.light-theme .logo-text .slogan {
 
 .theme-toggle-btn:hover { transform: translateY(-2px); }
 
-.theme-toggle-btn.is-light { background: #fff; color: #061018; border-color: rgba(6,30,40,0.06); }
+.theme-toggle-btn.is-light { background: #f8fafc; color: #061018; border-color: rgba(15,23,42,0.12); }
 
 .theme-toggle-btn .moon { display: none; }
 .theme-toggle-btn.is-light .moon { display: inline; }
